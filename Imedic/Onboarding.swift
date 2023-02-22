@@ -10,12 +10,14 @@ import SwiftUI
 struct Onboarding: View {
     
     @ObservedObject var onboarding_vm = OnboardingVM()
+    @ObservedObject var navVm: NavVm
     
     var body: some View {
-        
-        VStack{
+       
             ZStack{
-                Button(action: {}, label: {
+                Button(action: {
+                    navVm.skipOnboarding()
+                }, label: {
                     Text(onboarding_vm.btnText)
                 })
                 .padding(.trailing, 240)
@@ -23,38 +25,43 @@ struct Onboarding: View {
                 
                 Image("onboard_plus")
                     .padding(.leading, 220)
-            }
-            .padding(.bottom, 60)
-            
-            VStack{
                 
-                Text(onboarding_vm.currentTitle)
-                    .foregroundColor(Color.green)
-                    .font(.system(size: 20))
-                    .padding(.bottom, 29)
                 
-                Text(onboarding_vm.currentText)
-                    .foregroundColor(Color.gray)
-                    .font(.system(size: 14))
-                    .padding(.bottom, 60)
-                
-                points(pos: onboarding_vm.points)
-                    .padding(.bottom, 105)
+                VStack{
+                    
+                    Text(onboarding_vm.currentTitle)
+                        .foregroundColor(Color.green)
+                        .font(.system(size: 20))
+                        .padding(.bottom, 29)
+                    
+                    Text(onboarding_vm.currentText)
+                        .foregroundColor(Color.gray)
+                        .font(.system(size: 14))
+                        .padding(.bottom, 60)
+                    
+                    points(pos: onboarding_vm.points)
+                        .padding(.bottom, 105)
+                    
+                }
+                .padding(.top, 600)
                 
                 Image(onboarding_vm.currentImage)
+                    .padding(.top, 1100)
             }
-        }
-        .gesture(
-            DragGesture(minimumDistance: 50)
-                .onEnded({value in
-                    if value.translation.width < 0{
-                        onboarding_vm.incrementPos()
-                    }
-                    else if value.translation.width > 0{
-                        onboarding_vm.decrementPos()
-                    }
-                })
-        )
+            .padding(.bottom, 550)
+        
+        
+            .gesture(
+                DragGesture(minimumDistance: 50)
+                    .onEnded({value in
+                        if value.translation.width < 0{
+                            onboarding_vm.incrementPos()
+                        }
+                        else if value.translation.width > 0{
+                            onboarding_vm.decrementPos()
+                        }
+                    })
+            )
     }
 }
 
@@ -69,11 +76,5 @@ struct points: View{
             Image(pos[1])
             Image(pos[2])
         }
-    }
-}
-
-struct Onboarding_Previews: PreviewProvider {
-    static var previews: some View {
-        Onboarding()
     }
 }

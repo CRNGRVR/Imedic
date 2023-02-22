@@ -8,14 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var navVm = NavVm()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        Onboarding(navVm: navVm)
     }
 }
 
