@@ -11,6 +11,8 @@
 		2C904D0429A678E20061304B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C904D0329A678E20061304B /* Launch Screen.storyboard */; };
 		2C904D0629A67B320061304B /* OnboardingVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C904D0529A67B320061304B /* OnboardingVM.swift */; };
 		2C904D0829A681270061304B /* NavVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C904D0729A681270061304B /* NavVM.swift */; };
+		2C904D0D29A696290061304B /* Register_Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C904D0C29A696290061304B /* Register_Auth.swift */; };
+		2C904D0F29A696750061304B /* Register_Auth_VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C904D0E29A696750061304B /* Register_Auth_VM.swift */; };
 		2CB571E929A6507700278688 /* ImedicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB571E829A6507700278688 /* ImedicApp.swift */; };
 		2CB571EB29A6507700278688 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB571EA29A6507700278688 /* ContentView.swift */; };
 		2CB571ED29A6507900278688 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CB571EC29A6507900278688 /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 		2C904D0329A678E20061304B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		2C904D0529A67B320061304B /* OnboardingVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVM.swift; sourceTree = "<group>"; };
 		2C904D0729A681270061304B /* NavVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavVM.swift; sourceTree = "<group>"; };
+		2C904D0C29A696290061304B /* Register_Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register_Auth.swift; sourceTree = "<group>"; };
+		2C904D0E29A696750061304B /* Register_Auth_VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register_Auth_VM.swift; sourceTree = "<group>"; };
 		2CB571E529A6507700278688 /* Imedic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Imedic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB571E829A6507700278688 /* ImedicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImedicApp.swift; sourceTree = "<group>"; };
 		2CB571EA29A6507700278688 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,11 +44,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C904D0929A695A50061304B /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				2C904D0529A67B320061304B /* OnboardingVM.swift */,
+				2C904D0129A677330061304B /* Onboarding.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		2C904D0A29A695BB0061304B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2CB571EA29A6507700278688 /* ContentView.swift */,
+				2C904D0729A681270061304B /* NavVM.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2C904D0B29A695D90061304B /* Register_Auth */ = {
+			isa = PBXGroup;
+			children = (
+				2C904D0C29A696290061304B /* Register_Auth.swift */,
+				2C904D0E29A696750061304B /* Register_Auth_VM.swift */,
+			);
+			path = Register_Auth;
+			sourceTree = "<group>";
+		};
 		2CB571DC29A6507600278688 = {
 			isa = PBXGroup;
 			children = (
-				2C904D0729A681270061304B /* NavVM.swift */,
-				2C904D0529A67B320061304B /* OnboardingVM.swift */,
 				2CB571E729A6507700278688 /* Imedic */,
 				2CB571E629A6507700278688 /* Products */,
 			);
@@ -61,11 +90,12 @@
 		2CB571E729A6507700278688 /* Imedic */ = {
 			isa = PBXGroup;
 			children = (
+				2C904D0A29A695BB0061304B /* Common */,
+				2C904D0929A695A50061304B /* Onboarding */,
 				2CB571E829A6507700278688 /* ImedicApp.swift */,
-				2CB571EA29A6507700278688 /* ContentView.swift */,
+				2C904D0B29A695D90061304B /* Register_Auth */,
 				2CB571EC29A6507900278688 /* Assets.xcassets */,
 				2CB571EE29A6507900278688 /* Preview Content */,
-				2C904D0129A677330061304B /* Onboarding.swift */,
 				2C904D0329A678E20061304B /* Launch Screen.storyboard */,
 			);
 			path = Imedic;
@@ -152,7 +182,9 @@
 			files = (
 				2C904D0229A677330061304B /* Onboarding.swift in Sources */,
 				2C904D0829A681270061304B /* NavVM.swift in Sources */,
+				2C904D0D29A696290061304B /* Register_Auth.swift in Sources */,
 				2CB571EB29A6507700278688 /* ContentView.swift in Sources */,
+				2C904D0F29A696750061304B /* Register_Auth_VM.swift in Sources */,
 				2CB571E929A6507700278688 /* ImedicApp.swift in Sources */,
 				2C904D0629A67B320061304B /* OnboardingVM.swift in Sources */,
 			);
@@ -288,6 +320,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -317,6 +350,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
