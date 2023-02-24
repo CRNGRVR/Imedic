@@ -74,4 +74,11 @@ class Reg_Auth_VM: ObservableObject{
         }
         
     }
+    
+    func next_click(){
+        
+        if isSendAllowed{
+            //  Функция
+        }
+    }
 }

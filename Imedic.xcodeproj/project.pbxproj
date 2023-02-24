@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C740F8D29A7D31500F12781 /* CheckingEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C740F8C29A7D31500F12781 /* CheckingEmailView.swift */; };
+		2C740F8F29A8E04600F12781 /* CheckEmailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C740F8E29A8E04600F12781 /* CheckEmailVM.swift */; };
 		2C904D0229A677330061304B /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C904D0129A677330061304B /* Onboarding.swift */; };
 		2C904D0429A678E20061304B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C904D0329A678E20061304B /* Launch Screen.storyboard */; };
 		2C904D0629A67B320061304B /* OnboardingVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C904D0529A67B320061304B /* OnboardingVM.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C740F8C29A7D31500F12781 /* CheckingEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckingEmailView.swift; sourceTree = "<group>"; };
+		2C740F8E29A8E04600F12781 /* CheckEmailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckEmailVM.swift; sourceTree = "<group>"; };
 		2C904D0129A677330061304B /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		2C904D0329A678E20061304B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		2C904D0529A67B320061304B /* OnboardingVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVM.swift; sourceTree = "<group>"; };
@@ -44,6 +48,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C740F8B29A7D2F100F12781 /* CheckingEmail */ = {
+			isa = PBXGroup;
+			children = (
+				2C740F8C29A7D31500F12781 /* CheckingEmailView.swift */,
+				2C740F8E29A8E04600F12781 /* CheckEmailVM.swift */,
+			);
+			path = CheckingEmail;
+			sourceTree = "<group>";
+		};
 		2C904D0929A695A50061304B /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +103,7 @@
 		2CB571E729A6507700278688 /* Imedic */ = {
 			isa = PBXGroup;
 			children = (
+				2C740F8B29A7D2F100F12781 /* CheckingEmail */,
 				2C904D0A29A695BB0061304B /* Common */,
 				2C904D0929A695A50061304B /* Onboarding */,
 				2CB571E829A6507700278688 /* ImedicApp.swift */,
@@ -181,6 +195,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C904D0229A677330061304B /* Onboarding.swift in Sources */,
+				2C740F8F29A8E04600F12781 /* CheckEmailVM.swift in Sources */,
+				2C740F8D29A7D31500F12781 /* CheckingEmailView.swift in Sources */,
 				2C904D0829A681270061304B /* NavVM.swift in Sources */,
 				2C904D0D29A696290061304B /* Register_Auth.swift in Sources */,
 				2CB571EB29A6507700278688 /* ContentView.swift in Sources */,

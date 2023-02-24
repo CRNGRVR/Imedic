@@ -12,7 +12,8 @@ struct ImedicApp: App {
     var body: some Scene {
         WindowGroup {
             //ContentView()
-            Register_Auth()
+            //Register_Auth()
+            CheckingEmailView()
         }
     }
 }
