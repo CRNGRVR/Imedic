@@ -34,7 +34,7 @@ struct CheckingEmailView: View {
             //  .keyboardType(.phonePad)
             
                 //  До выяснения обстоятельств
-                tf(text: $t)
+                tf(text: $t, placeHolder: "Ну я даже не знаю..")
                     .keyboardType(.phonePad)
                     //.padding(.bottom, 16)
             

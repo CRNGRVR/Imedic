@@ -37,7 +37,7 @@ struct Register_Auth: View {
                 .padding(.trailing, 235)
             
             
-            tf(text: $reg_auth_vm.mail)
+            tf(text: $reg_auth_vm.mail, placeHolder: "example@mail.ru")
                 .padding(.bottom, 32)
             
             Button(action: {}, label: {
@@ -80,25 +80,6 @@ struct Register_Auth: View {
         }
         
         
-    }
-}
-
-
-struct tf: View{
-    
-    @Binding var text: String
-    
-    var body: some View{
-        
-        ZStack{
-            RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 1)
-            
-            TextField("example@mail.ru", text: $text)
-                .padding(.leading, 15)
-        }
-        .frame(width: 335, height: 48)
-        .background(Color("tf"))
-
     }
 }
 

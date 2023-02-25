@@ -13,7 +13,8 @@ struct ImedicApp: App {
         WindowGroup {
             //ContentView()
             //Register_Auth()
-            CheckingEmailView()
+            //CheckingEmailView()
+            CreatePasswordView()
         }
     }
 }

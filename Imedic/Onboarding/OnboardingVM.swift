@@ -42,7 +42,7 @@ class OnboardingVM: ObservableObject{
             currentPos -= 1
         }
     }
-    
+
     func switchPoint(){
         
         switch currentPos{
