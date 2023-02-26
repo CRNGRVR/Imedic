@@ -9,12 +9,14 @@ import SwiftUI
 
 struct CheckingEmailView: View {
     
-    @State var t = ""
-    //@ObservedObject var vm = CheckEmailVm()
+    @ObservedObject var checkingemailVM: CheckingEmailVM
+    init(nav: NavVm){
+        self.checkingemailVM = CheckingEmailVM(nav: nav)
+    }
     
     var body: some View {
         VStack{
-            Button(action: {}, label: {
+            Button(action: {checkingemailVM.backToEmail()}, label: {
                 ZStack{
                     Color("tf")
                     Image("back")
@@ -30,32 +32,20 @@ struct CheckingEmailView: View {
                 .font(.system(size: 17, weight: .semibold))
                 .padding(.bottom, 24)
             
-            //TextField("", text: $t)
-            //  .keyboardType(.phonePad)
-            
-                //  До выяснения обстоятельств
-                tf(text: $t, placeHolder: "Ну я даже не знаю..")
+            //  До выяснения обстоятельств
+            tf(text: $checkingemailVM.code, placeHolder: "Ну я даже не знаю..")
                     .keyboardType(.phonePad)
-                    //.padding(.bottom, 16)
+                    .padding(.bottom, 16)
             
-            //Text("Отправить код повторно можно\n будет через \(vm.remainingTime) секунд")
+            Text("Отправить код повторно можно\n будет через \(checkingemailVM.secondsToSend) секунд")
                 .font(.system(size: 15))
                 .foregroundColor(Color.gray)
                 .multilineTextAlignment(.center)
         }
         .padding(.bottom, 400)
         .onAppear{
-            //vm.waiting()
+            checkingemailVM.sheduleTimer()
         }
     }
         
-}
-
-
-
-
-struct CheckingEmailView_Previews: PreviewProvider {
-    static var previews: some View {
-        CheckingEmailView()
-    }
 }

@@ -83,7 +83,7 @@ class Reg_AuthVM: ObservableObject{
         
         if isSendAllowed{
             //  Функция
-            nav.currentScreen = "checkPassword"
+            nav.currentScreen = "checking_email"
         }
     }
 }

@@ -22,6 +22,7 @@
 		2CB571EB29A6507700278688 /* ParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB571EA29A6507700278688 /* ParentView.swift */; };
 		2CB571ED29A6507900278688 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CB571EC29A6507900278688 /* Assets.xcassets */; };
 		2CB571F029A6507900278688 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CB571EF29A6507900278688 /* Preview Assets.xcassets */; };
+		2CFF374629AB400700981131 /* CheckingEmailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF374529AB400700981131 /* CheckingEmailVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		2CB571EA29A6507700278688 /* ParentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentView.swift; sourceTree = "<group>"; };
 		2CB571EC29A6507900278688 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CB571EF29A6507900278688 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2CFF374529AB400700981131 /* CheckingEmailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckingEmailVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				2C740F8C29A7D31500F12781 /* CheckingEmailView.swift */,
+				2CFF374529AB400700981131 /* CheckingEmailVM.swift */,
 			);
 			path = CheckingEmail;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C904D0229A677330061304B /* Onboarding.swift in Sources */,
+				2CFF374629AB400700981131 /* CheckingEmailVM.swift in Sources */,
 				2C30F60729A92E0D001F322C /* CreatePatientView.swift in Sources */,
 				2C740F8D29A7D31500F12781 /* CheckingEmailView.swift in Sources */,
 				2C30F60429A90538001F322C /* CreatePasswordVM.swift in Sources */,

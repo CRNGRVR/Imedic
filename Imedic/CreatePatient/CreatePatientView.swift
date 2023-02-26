@@ -27,10 +27,11 @@ struct CreatePatientView: View {
             }
             .padding(.bottom, 16)
             
-            Text("Без карты пациента вы не сможете заказать анализы.")
+            Text("Без карты пациента вы не сможете заказать\nанализы.")
                 .font(.system(size: 14))
                 .foregroundColor(Color.gray)
                 .padding(.bottom, 8)
+                .padding(.trailing, 30)
                 
 
             

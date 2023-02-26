@@ -19,6 +19,10 @@ struct ParentView: View {
             Onboarding(nav: navVm)
         case "reg_auth":
             Register_Auth(nav: navVm)
+        case "checking_email":
+            CheckingEmailView(nav: navVm)
+        case "create_password":
+            CreatePasswordView()
             
         default: Onboarding(nav: navVm)
         }
