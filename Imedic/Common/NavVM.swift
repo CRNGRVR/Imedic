@@ -12,6 +12,7 @@ class NavVm: ObservableObject{
     //   Используется в ParentView для навигации между дочерними представлениями
     @Published var currentScreen: String
     
+    
     init(){
         
         //  onboarding показывается только при первом запуске
@@ -23,4 +24,13 @@ class NavVm: ObservableObject{
             currentScreen = "reg_auth"
         }
     }
+    
+    
+    
+    
+    
+    //  Временно здесь ещё и email ака глобальная переменная...
+    @Published var email = ""
+    @Published var token = ""
+
 }

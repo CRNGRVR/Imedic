@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class Reg_AuthVM: ObservableObject{
     
@@ -82,8 +83,24 @@ class Reg_AuthVM: ObservableObject{
     func next_click(){
         
         if isSendAllowed{
-            //  Функция
-            nav.currentScreen = "checking_email"
+            
+            let headers: HTTPHeaders = ["email" : mail]
+            
+            AF
+                .request("https://medic.madskill.ru/api/sendCode", method: .post ,headers: headers)
+                .responseDecodable(of: SendCodeOutput.self){responce in
+                    if responce.value != nil{
+                        
+                        if responce.response?.statusCode == 200{
+                            
+                            self.nav.email = self.mail //Передача в другое представление
+                            self.nav.currentScreen = "checking_email"
+                        }
+                    }
+                    else{
+                        print("Error")
+                    }
+                }
         }
     }
 }

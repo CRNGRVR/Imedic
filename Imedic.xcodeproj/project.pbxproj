@@ -25,6 +25,8 @@
 		2CFF374629AB400700981131 /* CheckingEmailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF374529AB400700981131 /* CheckingEmailVM.swift */; };
 		2CFF374829ABBB7500981131 /* CreatePatientVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF374729ABBB7500981131 /* CreatePatientVM.swift */; };
 		2CFF374B29ABC01600981131 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2CFF374A29ABC01600981131 /* Alamofire */; };
+		2CFF374D29ABC15100981131 /* Register_Auth_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF374C29ABC15100981131 /* Register_Auth_Model.swift */; };
+		2CFF374F29ABC83700981131 /* CheckingEmailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF374E29ABC83700981131 /* CheckingEmailModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		2CB571EF29A6507900278688 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2CFF374529AB400700981131 /* CheckingEmailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckingEmailVM.swift; sourceTree = "<group>"; };
 		2CFF374729ABBB7500981131 /* CreatePatientVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePatientVM.swift; sourceTree = "<group>"; };
+		2CFF374C29ABC15100981131 /* Register_Auth_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register_Auth_Model.swift; sourceTree = "<group>"; };
+		2CFF374E29ABC83700981131 /* CheckingEmailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckingEmailModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 			children = (
 				2C740F8C29A7D31500F12781 /* CheckingEmailView.swift */,
 				2CFF374529AB400700981131 /* CheckingEmailVM.swift */,
+				2CFF374E29ABC83700981131 /* CheckingEmailModel.swift */,
 			);
 			path = CheckingEmail;
 			sourceTree = "<group>";
@@ -102,6 +107,7 @@
 				2CB571EA29A6507700278688 /* ParentView.swift */,
 				2C904D0729A681270061304B /* NavVM.swift */,
 				2C30F60829A92EB5001F322C /* tf.swift */,
+				2CB571E829A6507700278688 /* ImedicApp.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -111,6 +117,7 @@
 			children = (
 				2C904D0C29A696290061304B /* Register_Auth.swift */,
 				2C904D0E29A696750061304B /* Register_Auth_VM.swift */,
+				2CFF374C29ABC15100981131 /* Register_Auth_Model.swift */,
 			);
 			path = Register_Auth;
 			sourceTree = "<group>";
@@ -139,7 +146,6 @@
 				2C740F8B29A7D2F100F12781 /* CheckingEmail */,
 				2C904D0A29A695BB0061304B /* Common */,
 				2C904D0929A695A50061304B /* Onboarding */,
-				2CB571E829A6507700278688 /* ImedicApp.swift */,
 				2C904D0B29A695D90061304B /* Register_Auth */,
 				2CB571EC29A6507900278688 /* Assets.xcassets */,
 				2CB571EE29A6507900278688 /* Preview Content */,
@@ -241,10 +247,12 @@
 				2C30F60429A90538001F322C /* CreatePasswordVM.swift in Sources */,
 				2C904D0829A681270061304B /* NavVM.swift in Sources */,
 				2C904D0D29A696290061304B /* Register_Auth.swift in Sources */,
+				2CFF374F29ABC83700981131 /* CheckingEmailModel.swift in Sources */,
 				2CB571EB29A6507700278688 /* ParentView.swift in Sources */,
 				2C904D0F29A696750061304B /* Register_Auth_VM.swift in Sources */,
 				2C30F60229A9052C001F322C /* CreatePasswordView.swift in Sources */,
 				2CB571E929A6507700278688 /* ImedicApp.swift in Sources */,
+				2CFF374D29ABC15100981131 /* Register_Auth_Model.swift in Sources */,
 				2C904D0629A67B320061304B /* OnboardingVM.swift in Sources */,
 				2C30F60929A92EB5001F322C /* tf.swift in Sources */,
 			);

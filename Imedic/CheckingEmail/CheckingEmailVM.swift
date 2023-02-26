@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class CheckingEmailVM: ObservableObject{
     
@@ -22,7 +23,7 @@ class CheckingEmailVM: ObservableObject{
         }
     }
     
-    @Published var secondsToSend = 10
+    @Published var secondsToSend = 59
     var stop = false
     
     //  Запускает таймер до повторной отправки кода, как только загрузилась страница
@@ -52,12 +53,18 @@ class CheckingEmailVM: ObservableObject{
     
     func check(){
         
-        let example = 0101
+        let headers: HTTPHeaders = ["email": nav.email, "code": code]
         
-        if Int(code) == example{
-            stop = true
-            next()
-        }
+        AF
+            .request("https://medic.madskill.ru/api/signin", method: .post, headers: headers)
+            .responseDecodable(of: CheckingEmailOutput.self){ [self]responce in
+                
+                if responce.value != nil{
+                    self.nav.token = responce.value!.token
+                    self.stop = true
+                    next()
+                }
+            }
     }
     
     func backToEmail(){
