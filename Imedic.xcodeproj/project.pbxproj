@@ -23,6 +23,8 @@
 		2CB571ED29A6507900278688 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CB571EC29A6507900278688 /* Assets.xcassets */; };
 		2CB571F029A6507900278688 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CB571EF29A6507900278688 /* Preview Assets.xcassets */; };
 		2CFF374629AB400700981131 /* CheckingEmailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF374529AB400700981131 /* CheckingEmailVM.swift */; };
+		2CFF374829ABBB7500981131 /* CreatePatientVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF374729ABBB7500981131 /* CreatePatientVM.swift */; };
+		2CFF374B29ABC01600981131 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2CFF374A29ABC01600981131 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,7 @@
 		2CB571EC29A6507900278688 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CB571EF29A6507900278688 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2CFF374529AB400700981131 /* CheckingEmailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckingEmailVM.swift; sourceTree = "<group>"; };
+		2CFF374729ABBB7500981131 /* CreatePatientVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePatientVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CFF374B29ABC01600981131 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				2C30F60629A92E0D001F322C /* CreatePatientView.swift */,
+				2CFF374729ABBB7500981131 /* CreatePatientVM.swift */,
 			);
 			path = CreatePatient;
 			sourceTree = "<group>";
@@ -167,6 +172,9 @@
 			dependencies = (
 			);
 			name = Imedic;
+			packageProductDependencies = (
+				2CFF374A29ABC01600981131 /* Alamofire */,
+			);
 			productName = Imedic;
 			productReference = 2CB571E529A6507700278688 /* Imedic.app */;
 			productType = "com.apple.product-type.application";
@@ -195,6 +203,9 @@
 				Base,
 			);
 			mainGroup = 2CB571DC29A6507600278688;
+			packageReferences = (
+				2CFF374929ABC01600981131 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 2CB571E629A6507700278688 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -222,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CFF374829ABBB7500981131 /* CreatePatientVM.swift in Sources */,
 				2C904D0229A677330061304B /* Onboarding.swift in Sources */,
 				2CFF374629AB400700981131 /* CheckingEmailVM.swift in Sources */,
 				2C30F60729A92E0D001F322C /* CreatePatientView.swift in Sources */,
@@ -437,6 +449,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2CFF374929ABC01600981131 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2CFF374A29ABC01600981131 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2CFF374929ABC01600981131 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2CB571DD29A6507600278688 /* Project object */;
 }

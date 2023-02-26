@@ -9,7 +9,10 @@ import SwiftUI
 
 struct CreatePatientView: View {
     
-    @State var zaglushka = ""
+    @ObservedObject var createPatientVm: CreatePatientVM
+    init(nav: NavVm){
+        createPatientVm = CreatePatientVM(nav: nav)
+    }
     
     var body: some View {
        
@@ -42,18 +45,18 @@ struct CreatePatientView: View {
                 .lineSpacing(2)
             
             VStack(spacing: 24){
-                tf(text: $zaglushka, placeHolder: "Имя")
-                tf(text: $zaglushka, placeHolder: "Отчество")
-                tf(text: $zaglushka, placeHolder: "Фамилия")
-                tf(text: $zaglushka, placeHolder: "Дата рождения")
-                tf(text: $zaglushka, placeHolder: "Пол")
+                tf(text: $createPatientVm.name, placeHolder: "Имя")
+                tf(text: $createPatientVm.otch, placeHolder: "Отчество")
+                tf(text: $createPatientVm.fam, placeHolder: "Фамилия")
+                tf(text: $createPatientVm.date, placeHolder: "Дата рождения")
+                tf(text: $createPatientVm.pol, placeHolder: "Пол")
             }
             .padding(.bottom, 48)
             
             Button(action: {}, label: {
                 ZStack{
                     Color.blue
-                        .opacity(1)
+                        .opacity(createPatientVm.isSetCardAllowed ? 1 : 0.5)
                     
                     Text("Создать")
                         .foregroundColor(Color.white)
@@ -67,8 +70,3 @@ struct CreatePatientView: View {
     }
 }
 
-struct CreatePatientView_Previews: PreviewProvider {
-    static var previews: some View {
-        CreatePatientView()
-    }
-}

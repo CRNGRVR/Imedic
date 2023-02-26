@@ -22,7 +22,9 @@ struct ParentView: View {
         case "checking_email":
             CheckingEmailView(nav: navVm)
         case "create_password":
-            CreatePasswordView()
+            CreatePasswordView(nav: navVm)
+        case "create_patient":
+            CreatePatientView(nav: navVm)
             
         default: Onboarding(nav: navVm)
         }

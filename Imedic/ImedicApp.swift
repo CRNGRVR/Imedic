@@ -15,6 +15,7 @@ struct ImedicApp: App {
             //Register_Auth()
             //CheckingEmailView()
             //CreatePasswordView()
+            
         }
     }
 }

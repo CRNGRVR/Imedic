@@ -9,12 +9,15 @@ import SwiftUI
 
 struct CreatePasswordView: View {
     
-    @ObservedObject var createPasswordVM = CreatePasswordVM()
+    @ObservedObject var createPasswordVM: CreatePasswordVM
+    init(nav: NavVm){
+        createPasswordVM = CreatePasswordVM(nav: nav)
+    }
     
     var body: some View {
         
         VStack{
-            Button(action: {}, label: {
+            Button(action: {createPasswordVM.skip()}, label: {
                 Text("Пропустить")
                     .font(.system(size: 15))
             })
@@ -111,11 +114,5 @@ struct keyboard: View{
                 .padding(.leading, 20)
             }
         }
-    }
-}
-
-struct CreatePasswordView_Previews: PreviewProvider {
-    static var previews: some View {
-        CreatePasswordView()
     }
 }

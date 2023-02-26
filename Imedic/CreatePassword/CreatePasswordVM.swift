@@ -9,6 +9,11 @@ import Foundation
 
 class CreatePasswordVM: ObservableObject{
     
+    @Published var nav: NavVm
+    init(nav: NavVm){
+        self.nav = nav
+    }
+    
     @Published var pass_points = [false, false, false, false]
     @Published var password = ""
     
@@ -33,8 +38,21 @@ class CreatePasswordVM: ObservableObject{
             //  Задержка, чтобы пользователь увидел результат заполнения
             DispatchQueue.global(qos: .default).async{
                 usleep(1000000) //  1 секунда
-                print("Пароль заполнен")
+                self.save()
+                self.next()
             }
         }
+    }
+    
+    func save(){
+        UserDefaults.standard.set(password, forKey: "password")
+    }
+    
+    func next(){
+        nav.currentScreen = "create_patient"
+    }
+    
+    func skip(){
+        next()
     }
 }
