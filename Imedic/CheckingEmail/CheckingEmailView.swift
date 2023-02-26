@@ -10,7 +10,7 @@ import SwiftUI
 struct CheckingEmailView: View {
     
     @State var t = ""
-    @ObservedObject var vm = CheckEmailVm()
+    //@ObservedObject var vm = CheckEmailVm()
     
     var body: some View {
         VStack{
@@ -38,14 +38,14 @@ struct CheckingEmailView: View {
                     .keyboardType(.phonePad)
                     //.padding(.bottom, 16)
             
-            Text("Отправить код повторно можно\n будет через \(vm.remainingTime) секунд")
+            //Text("Отправить код повторно можно\n будет через \(vm.remainingTime) секунд")
                 .font(.system(size: 15))
                 .foregroundColor(Color.gray)
                 .multilineTextAlignment(.center)
         }
         .padding(.bottom, 400)
         .onAppear{
-            vm.waiting()
+            //vm.waiting()
         }
     }
         

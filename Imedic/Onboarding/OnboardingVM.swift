@@ -9,6 +9,12 @@ import Foundation
 
 class OnboardingVM: ObservableObject{
     
+    @Published var nav: NavVm
+    
+    init(nav: NavVm) {
+        self.nav = nav
+    }
+    
     @Published var btnText = "Пропустить"
     @Published var currentPos = 0 {
         didSet{
@@ -67,6 +73,11 @@ class OnboardingVM: ObservableObject{
             points[2] = "nonactive_point"
             break
         }
+    }
+    
+    
+    func skipOnboarding(){
+        nav.currentScreen = "reg_auth"
     }
     
 }

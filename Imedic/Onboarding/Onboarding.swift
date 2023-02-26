@@ -9,59 +9,62 @@ import SwiftUI
 
 struct Onboarding: View {
     
-    @ObservedObject var onboarding_vm = OnboardingVM()
-    @ObservedObject var navVm: NavVm
+    @ObservedObject var onboarding_vm: OnboardingVM
+    
+    init(nav: NavVm){
+        onboarding_vm = OnboardingVM(nav: nav)
+    }
     
     var body: some View {
-       
-            ZStack{
-                Button(action: {
-                    navVm.skipOnboarding()
-                }, label: {
-                    Text(onboarding_vm.btnText)
-                })
-                .padding(.trailing, 240)
-                .padding(.bottom, 140)
+        
+        ZStack{
+            Button(action: {
+                onboarding_vm.skipOnboarding()
+            }, label: {
+                Text(onboarding_vm.btnText)
+            })
+            .padding(.trailing, 240)
+            .padding(.bottom, 140)
+            
+            Image("onboard_plus")
+                .padding(.leading, 220)
+            
+            
+            VStack{
                 
-                Image("onboard_plus")
-                    .padding(.leading, 220)
+                Text(onboarding_vm.currentTitle)
+                    .foregroundColor(Color.green)
+                    .font(.system(size: 20))
+                    .padding(.bottom, 29)
                 
+                Text(onboarding_vm.currentText)
+                    .foregroundColor(Color.gray)
+                    .font(.system(size: 14))
+                    .padding(.bottom, 60)
                 
-                VStack{
-                    
-                    Text(onboarding_vm.currentTitle)
-                        .foregroundColor(Color.green)
-                        .font(.system(size: 20))
-                        .padding(.bottom, 29)
-                    
-                    Text(onboarding_vm.currentText)
-                        .foregroundColor(Color.gray)
-                        .font(.system(size: 14))
-                        .padding(.bottom, 60)
-                    
-                    points(pos: onboarding_vm.points)
-                        .padding(.bottom, 105)
-                    
-                }
-                .padding(.top, 600)
+                points(pos: onboarding_vm.points)
+                    .padding(.bottom, 105)
                 
-                Image(onboarding_vm.currentImage)
-                    .padding(.top, 1100)
             }
-            .padding(.bottom, 550)
+            .padding(.top, 600)
+            
+            Image(onboarding_vm.currentImage)
+                .padding(.top, 1100)
+        }
+        .padding(.bottom, 550)
         
         
-            .gesture(
-                DragGesture(minimumDistance: 50)
-                    .onEnded({value in
-                        if value.translation.width < 0{
-                            onboarding_vm.incrementPos()
-                        }
-                        else if value.translation.width > 0{
-                            onboarding_vm.decrementPos()
-                        }
-                    })
-            )
+        .gesture(
+            DragGesture(minimumDistance: 50)
+                .onEnded({value in
+                    if value.translation.width < 0{
+                        onboarding_vm.incrementPos()
+                    }
+                    else if value.translation.width > 0{
+                        onboarding_vm.decrementPos()
+                    }
+                })
+        )
     }
 }
 

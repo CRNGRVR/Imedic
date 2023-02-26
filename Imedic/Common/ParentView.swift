@@ -12,7 +12,16 @@ struct ParentView: View {
     @ObservedObject var navVm = NavVm()
     
     var body: some View {
-        Onboarding(navVm: navVm)
+        
+        switch navVm.currentScreen{
+            
+        case "onboarding":
+            Onboarding(nav: navVm)
+        case "reg_auth":
+            Register_Auth(nav: navVm)
+            
+        default: Onboarding(nav: navVm)
+        }
     }
 }
 

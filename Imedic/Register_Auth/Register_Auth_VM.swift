@@ -7,8 +7,12 @@
 
 import Foundation
 
-class Reg_Auth_VM: ObservableObject{
+class Reg_AuthVM: ObservableObject{
     
+    @Published var nav: NavVm
+    init(nav: NavVm) {
+        self.nav = nav
+    }
     
     @Published var mail = "" {
         didSet{
@@ -79,6 +83,7 @@ class Reg_Auth_VM: ObservableObject{
         
         if isSendAllowed{
             //  Функция
+            nav.currentScreen = "checkPassword"
         }
     }
 }

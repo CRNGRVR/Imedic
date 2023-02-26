@@ -9,22 +9,17 @@ import Foundation
 
 class NavVm: ObservableObject{
     
-    @Published var currentScreen = ""
+    //   Используется в ParentView для навигации между дочерними представлениями
+    @Published var currentScreen = "onboarding"
     
     init(){
-
-        if UserDefaults.standard.bool(forKey: "isLoadedYet") == false{
-            currentScreen = "Onboarding"
-            UserDefaults.standard.set(true, forKey: "isLoadedYet")
-        }
-        else{
-            currentScreen = ""
-        }
-    }
-    
-    
-    func skipOnboarding(){
         
+//        if UserDefaults.standard.bool(forKey: "isLoadedYet") == false{
+//            currentScreen = "Onboarding"
+//            UserDefaults.standard.set(true, forKey: "isLoadedYet")
+//        }
+//        else{
+//            currentScreen = ""
+//        }
     }
-    
 }

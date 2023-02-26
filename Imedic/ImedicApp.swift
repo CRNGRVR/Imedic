@@ -11,10 +11,10 @@ import SwiftUI
 struct ImedicApp: App {
     var body: some Scene {
         WindowGroup {
-            //ContentView()
+            ParentView()
             //Register_Auth()
             //CheckingEmailView()
-            CreatePasswordView()
+            //CreatePasswordView()
         }
     }
 }
