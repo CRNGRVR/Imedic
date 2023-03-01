@@ -32,4 +32,8 @@ class CreatePatientVM: ObservableObject{
             isSetCardAllowed = false
         }
     }
+    
+    func skip(){
+        nav.currentScreen = "main"
+    }
 }

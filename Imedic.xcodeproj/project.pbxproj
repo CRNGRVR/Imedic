@@ -18,10 +18,17 @@
 		2C904D0829A681270061304B /* NavVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C904D0729A681270061304B /* NavVM.swift */; };
 		2C904D0D29A696290061304B /* Register_Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C904D0C29A696290061304B /* Register_Auth.swift */; };
 		2C904D0F29A696750061304B /* Register_Auth_VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C904D0E29A696750061304B /* Register_Auth_VM.swift */; };
+		2CB3437929ACD89E008A8716 /* AnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB3437829ACD89E008A8716 /* AnView.swift */; };
+		2CB3437B29ACD8B2008A8716 /* AnVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB3437A29ACD8B2008A8716 /* AnVM.swift */; };
+		2CB3437D29ACE403008A8716 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB3437C29ACE403008A8716 /* UserView.swift */; };
+		2CB3438029ACE69B008A8716 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2CB3437F29ACE69B008A8716 /* SDWebImageSwiftUI */; };
 		2CB571E929A6507700278688 /* ImedicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB571E829A6507700278688 /* ImedicApp.swift */; };
 		2CB571EB29A6507700278688 /* ParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB571EA29A6507700278688 /* ParentView.swift */; };
 		2CB571ED29A6507900278688 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CB571EC29A6507900278688 /* Assets.xcassets */; };
 		2CB571F029A6507900278688 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CB571EF29A6507900278688 /* Preview Assets.xcassets */; };
+		2CFF15FA29AC94F800F90A3D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF15F929AC94F800F90A3D /* MainView.swift */; };
+		2CFF15FC29AC950200F90A3D /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF15FB29AC950200F90A3D /* MainVM.swift */; };
+		2CFF15FE29AC951800F90A3D /* AnModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF15FD29AC951800F90A3D /* AnModel.swift */; };
 		2CFF374629AB400700981131 /* CheckingEmailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF374529AB400700981131 /* CheckingEmailVM.swift */; };
 		2CFF374829ABBB7500981131 /* CreatePatientVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF374729ABBB7500981131 /* CreatePatientVM.swift */; };
 		2CFF374B29ABC01600981131 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2CFF374A29ABC01600981131 /* Alamofire */; };
@@ -41,11 +48,17 @@
 		2C904D0729A681270061304B /* NavVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavVM.swift; sourceTree = "<group>"; };
 		2C904D0C29A696290061304B /* Register_Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register_Auth.swift; sourceTree = "<group>"; };
 		2C904D0E29A696750061304B /* Register_Auth_VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register_Auth_VM.swift; sourceTree = "<group>"; };
+		2CB3437829ACD89E008A8716 /* AnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnView.swift; sourceTree = "<group>"; };
+		2CB3437A29ACD8B2008A8716 /* AnVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnVM.swift; sourceTree = "<group>"; };
+		2CB3437C29ACE403008A8716 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		2CB571E529A6507700278688 /* Imedic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Imedic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB571E829A6507700278688 /* ImedicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImedicApp.swift; sourceTree = "<group>"; };
 		2CB571EA29A6507700278688 /* ParentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentView.swift; sourceTree = "<group>"; };
 		2CB571EC29A6507900278688 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CB571EF29A6507900278688 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2CFF15F929AC94F800F90A3D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		2CFF15FB29AC950200F90A3D /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
+		2CFF15FD29AC951800F90A3D /* AnModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnModel.swift; sourceTree = "<group>"; };
 		2CFF374529AB400700981131 /* CheckingEmailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckingEmailVM.swift; sourceTree = "<group>"; };
 		2CFF374729ABBB7500981131 /* CreatePatientVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePatientVM.swift; sourceTree = "<group>"; };
 		2CFF374C29ABC15100981131 /* Register_Auth_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register_Auth_Model.swift; sourceTree = "<group>"; };
@@ -57,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CB3438029ACE69B008A8716 /* SDWebImageSwiftUI in Frameworks */,
 				2CFF374B29ABC01600981131 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,6 +118,7 @@
 		2C904D0A29A695BB0061304B /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				2C904D0329A678E20061304B /* Launch Screen.storyboard */,
 				2CB571EA29A6507700278688 /* ParentView.swift */,
 				2C904D0729A681270061304B /* NavVM.swift */,
 				2C30F60829A92EB5001F322C /* tf.swift */,
@@ -120,6 +135,47 @@
 				2CFF374C29ABC15100981131 /* Register_Auth_Model.swift */,
 			);
 			path = Register_Auth;
+			sourceTree = "<group>";
+		};
+		2CB3437329ACD809008A8716 /* An */ = {
+			isa = PBXGroup;
+			children = (
+				2CFF15FD29AC951800F90A3D /* AnModel.swift */,
+				2CB3437829ACD89E008A8716 /* AnView.swift */,
+				2CB3437A29ACD8B2008A8716 /* AnVM.swift */,
+			);
+			path = An;
+			sourceTree = "<group>";
+		};
+		2CB3437429ACD81A008A8716 /* Res */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Res;
+			sourceTree = "<group>";
+		};
+		2CB3437529ACD827008A8716 /* Sup */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sup;
+			sourceTree = "<group>";
+		};
+		2CB3437629ACD836008A8716 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				2CB3437C29ACE403008A8716 /* UserView.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		2CB3437729ACD85E008A8716 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2CFF15F929AC94F800F90A3D /* MainView.swift */,
+				2CFF15FB29AC950200F90A3D /* MainVM.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		2CB571DC29A6507600278688 = {
@@ -141,6 +197,7 @@
 		2CB571E729A6507700278688 /* Imedic */ = {
 			isa = PBXGroup;
 			children = (
+				2CFF15F829AC94E400F90A3D /* Main */,
 				2C30F60529A92DEE001F322C /* CreatePatient */,
 				2C30F60029A90511001F322C /* CreatePassword */,
 				2C740F8B29A7D2F100F12781 /* CheckingEmail */,
@@ -149,7 +206,6 @@
 				2C904D0B29A695D90061304B /* Register_Auth */,
 				2CB571EC29A6507900278688 /* Assets.xcassets */,
 				2CB571EE29A6507900278688 /* Preview Content */,
-				2C904D0329A678E20061304B /* Launch Screen.storyboard */,
 			);
 			path = Imedic;
 			sourceTree = "<group>";
@@ -160,6 +216,18 @@
 				2CB571EF29A6507900278688 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2CFF15F829AC94E400F90A3D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2CB3437729ACD85E008A8716 /* Common */,
+				2CB3437629ACD836008A8716 /* User */,
+				2CB3437529ACD827008A8716 /* Sup */,
+				2CB3437429ACD81A008A8716 /* Res */,
+				2CB3437329ACD809008A8716 /* An */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +248,7 @@
 			name = Imedic;
 			packageProductDependencies = (
 				2CFF374A29ABC01600981131 /* Alamofire */,
+				2CB3437F29ACE69B008A8716 /* SDWebImageSwiftUI */,
 			);
 			productName = Imedic;
 			productReference = 2CB571E529A6507700278688 /* Imedic.app */;
@@ -211,6 +280,7 @@
 			mainGroup = 2CB571DC29A6507600278688;
 			packageReferences = (
 				2CFF374929ABC01600981131 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				2CB3437E29ACE69B008A8716 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 2CB571E629A6507700278688 /* Products */;
 			projectDirPath = "";
@@ -243,14 +313,20 @@
 				2C904D0229A677330061304B /* Onboarding.swift in Sources */,
 				2CFF374629AB400700981131 /* CheckingEmailVM.swift in Sources */,
 				2C30F60729A92E0D001F322C /* CreatePatientView.swift in Sources */,
+				2CB3437B29ACD8B2008A8716 /* AnVM.swift in Sources */,
 				2C740F8D29A7D31500F12781 /* CheckingEmailView.swift in Sources */,
 				2C30F60429A90538001F322C /* CreatePasswordVM.swift in Sources */,
+				2CFF15FE29AC951800F90A3D /* AnModel.swift in Sources */,
 				2C904D0829A681270061304B /* NavVM.swift in Sources */,
 				2C904D0D29A696290061304B /* Register_Auth.swift in Sources */,
 				2CFF374F29ABC83700981131 /* CheckingEmailModel.swift in Sources */,
+				2CB3437D29ACE403008A8716 /* UserView.swift in Sources */,
 				2CB571EB29A6507700278688 /* ParentView.swift in Sources */,
 				2C904D0F29A696750061304B /* Register_Auth_VM.swift in Sources */,
+				2CFF15FA29AC94F800F90A3D /* MainView.swift in Sources */,
+				2CB3437929ACD89E008A8716 /* AnView.swift in Sources */,
 				2C30F60229A9052C001F322C /* CreatePasswordView.swift in Sources */,
+				2CFF15FC29AC950200F90A3D /* MainVM.swift in Sources */,
 				2CB571E929A6507700278688 /* ImedicApp.swift in Sources */,
 				2CFF374D29ABC15100981131 /* Register_Auth_Model.swift in Sources */,
 				2C904D0629A67B320061304B /* OnboardingVM.swift in Sources */,
@@ -459,6 +535,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2CB3437E29ACE69B008A8716 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		2CFF374929ABC01600981131 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -470,6 +554,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2CB3437F29ACE69B008A8716 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2CB3437E29ACE69B008A8716 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
 		2CFF374A29ABC01600981131 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2CFF374929ABC01600981131 /* XCRemoteSwiftPackageReference "Alamofire" */;

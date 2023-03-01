@@ -23,7 +23,7 @@ struct CreatePatientView: View {
                     .font(.system(size: 24, weight: .bold))
                     .padding(.trailing, 55)
                 
-                Button(action: {}, label: {
+                Button(action: {createPatientVm.skip()}, label: {
                     Text("Пропустить")
                         .font(.system(size: 15))
                 })

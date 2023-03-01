@@ -57,12 +57,12 @@ class CheckingEmailVM: ObservableObject{
         
         AF
             .request("https://medic.madskill.ru/api/signin", method: .post, headers: headers)
-            .responseDecodable(of: CheckingEmailOutput.self){ [self]responce in
+            .responseDecodable(of: CheckingEmailOutput.self){responce in
                 
                 if responce.value != nil{
                     self.nav.token = responce.value!.token
                     self.stop = true
-                    next()
+                    self.next()
                 }
             }
     }
