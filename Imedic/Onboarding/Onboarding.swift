@@ -52,7 +52,7 @@ struct Onboarding: View {
                 .padding(.top, 1100)
         }
         .padding(.bottom, 550)
-        
+
         
         .gesture(
             DragGesture(minimumDistance: 50)

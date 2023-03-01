@@ -85,6 +85,9 @@ class AnVM: ObservableObject{
                 if responce.value != nil{
                     self.catalogArr = responce.value!
                 }
+                else{
+                    print("Error")
+                }
             }
     }
     
