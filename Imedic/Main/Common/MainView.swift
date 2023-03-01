@@ -17,63 +17,65 @@ struct MainView: View {
     var body: some View {
         ZStack{
             
-            Color.blue
+            //Color.blue
             
-            switch mainVM.internalNav{
-            case "an":
-                AnView(nav: mainVM.nav) //  Возможно нав там не нужен
-                    .padding(.top, 40)
-            case "user":
-                UserView()
-                
-            default: AnView(nav: mainVM.nav)
-                    .padding(.top, 40)
-            }
-                
-            //  Таббар
-            ZStack{
-                Color.white
-                    .frame(width: 390, height: 100)
-                
-                HStack(spacing: 27){
+            VStack(spacing: 0){
+                switch mainVM.internalNav{
+                case "an":
+                    AnView(nav: mainVM.nav) //  Возможно нав там не нужен
+                        //.padding(.top, 40)
+                case "user":
+                    UserView()
                     
-                    Button(action: {mainVM.an()}, label: {
-                        VStack{
-                            Image(mainVM.isActiveTabs[0] ? "a-an" : "non-an")
-                            Text("Анализы")
-                                .foregroundColor(mainVM.isActiveTabs[0] ? Color.blue : Color.gray)
-                                .font(.system(size: 12))
-                        }
-                    })
-                    Button(action: {mainVM.res()}, label: {
-                        VStack{
-                            Image("res")
-                            Text("Результаты")
-                                .foregroundColor(mainVM.isActiveTabs[1] ? Color.blue : Color.gray)
-                                .font(.system(size: 12))
-                        }
-                    })
-                    Button(action: {mainVM.sup()}, label: {
-                        VStack{
-                            Image("sup")
-                            Text("Поддержка")
-                                .foregroundColor(mainVM.isActiveTabs[2] ? Color.blue : Color.gray)
-                                .font(.system(size: 12))
-                        }
-                    })
-                    Button(action: {mainVM.user()}, label: {
-                        VStack{
-                            Image(mainVM.isActiveTabs[3] ? "a-user" : "non-user")
-                            Text("Профиль")
-                                .foregroundColor(mainVM.isActiveTabs[3] ? Color.blue : Color.gray)
-                                .font(.system(size: 12))
-                        }
-                    })
+                default: AnView(nav: mainVM.nav)
+                        .padding(.top, 40)
                 }
-                .padding(.bottom, 20)
+                    
+                //  Таббар
+                ZStack{
+                    Color.white
+                        .frame(width: 390, height: 60)
+                    
+                    HStack(spacing: 27){
+                        
+                        Button(action: {mainVM.an()}, label: {
+                            VStack{
+                                Image(mainVM.isActiveTabs[0] ? "a-an" : "non-an")
+                                Text("Анализы")
+                                    .foregroundColor(mainVM.isActiveTabs[0] ? Color.blue : Color.gray)
+                                    .font(.system(size: 12))
+                            }
+                        })
+                        Button(action: {mainVM.res()}, label: {
+                            VStack{
+                                Image("res")
+                                Text("Результаты")
+                                    .foregroundColor(mainVM.isActiveTabs[1] ? Color.blue : Color.gray)
+                                    .font(.system(size: 12))
+                            }
+                        })
+                        Button(action: {mainVM.sup()}, label: {
+                            VStack{
+                                Image("sup")
+                                Text("Поддержка")
+                                    .foregroundColor(mainVM.isActiveTabs[2] ? Color.blue : Color.gray)
+                                    .font(.system(size: 12))
+                            }
+                        })
+                        Button(action: {mainVM.user()}, label: {
+                            VStack{
+                                Image(mainVM.isActiveTabs[3] ? "a-user" : "non-user")
+                                Text("Профиль")
+                                    .foregroundColor(mainVM.isActiveTabs[3] ? Color.blue : Color.gray)
+                                    .font(.system(size: 12))
+                            }
+                        })
+                    }
+                    .padding(.top, 20)
+                }
+                .ignoresSafeArea(.all)
+                //.padding(.top, 745)
             }
-            .ignoresSafeArea(.all)
-            .padding(.top, 745)
         }
     }
 }

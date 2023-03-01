@@ -19,7 +19,7 @@ struct AnView: View {
         VStack{
             tf(text: $anVM.find, placeHolder: "Искать анализы")
             
-            ScrollView(.vertical){
+            ScrollView(.vertical, showsIndicators: false){
                 VStack{
                     Text("Акции и новости")
                     
@@ -38,7 +38,7 @@ struct AnView: View {
                     
                     //  Фильтры по категориям
                     ScrollView(.horizontal, showsIndicators: false){
-                        HStack{
+                        HStack(spacing: 16){
                             ForEach(anVM.categories){category in
                                 Button(action: {anVM.categoryClick(current: category.id)}, label: {
                                     
@@ -54,13 +54,15 @@ struct AnView: View {
                                 })
                             }
                         }
+                        .padding(.leading, 30)
                     }
+                    .padding(.bottom, 20)
                     
                     //  Каталог
                     ScrollView(.vertical, showsIndicators: false){
-                        VStack{
+                        VStack(spacing: 16){
                             ForEach(anVM.filtredCatalogArr){item in
-                                Text(item.name)
+                                CatalogBlock(title: item.name, duration: item.time_result, price: item.price)
                             }
                         }
                     }
@@ -117,8 +119,58 @@ struct NewsBlock: View{
     }
 }
 
+
+struct CatalogBlock: View{
+    
+    var title: String
+    var duration: String
+    var price: String
+    
+    var body: some View{
+        
+        ZStack{
+            Color("tf")
+                .frame(width: 335, height: 136)
+                .cornerRadius(10)
+            
+            Text(title)
+                .frame(width: 303)
+                .font(.system(size: 16))
+                .padding(.bottom, 60)
+                .padding(.trailing, 60)
+            
+            Text(duration)
+                .foregroundColor(Color.gray)
+                .font(.system(size: 14))
+                .padding(.top, 50)
+                .padding(.trailing, 260)
+            
+            Text(price)
+                .font(.system(size: 17, weight: .semibold))
+                .padding(.top, 90)
+                .padding(.trailing, 260)
+            
+            Button(action: {}, label: {
+                ZStack{
+                    Color("active")
+                        .frame(width: 96, height: 40)
+                        .cornerRadius(10)
+                    
+                    Text("Добавить")
+                        .foregroundColor(Color.white)
+                        .font(.system(size: 14))
+                        
+                }
+            })
+            .padding(.top, 70)
+            .padding(.leading, 220)
+        }
+    }
+}
+
 struct AnView_Previews: PreviewProvider {
     static var previews: some View {
-        AnView(nav: NavVm())
+        //AnView(nav: NavVm())
+        CatalogBlock(title: "Клинический анализ крови с лейкоцитарной формулировкой", duration: "2 дня", price: "1800")
     }
 }

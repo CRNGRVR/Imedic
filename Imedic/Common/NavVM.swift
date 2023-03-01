@@ -16,13 +16,14 @@ class NavVm: ObservableObject{
     init(){
         
         //  onboarding показывается только при первом запуске
-        if UserDefaults.standard.bool(forKey: "isLoadedYet") == false{
-            currentScreen = "onboarding"
-            UserDefaults.standard.set(true, forKey: "isLoadedYet")
-        }
-        else{
-            currentScreen = "reg_auth"
-        }
+//        if UserDefaults.standard.bool(forKey: "isLoadedYet") == false{
+//            currentScreen = "onboarding"
+//            UserDefaults.standard.set(true, forKey: "isLoadedYet")
+//        }
+//        else{
+//            currentScreen = "reg_auth"
+//        }
+        currentScreen = "onboarding"
     }
     
     
