@@ -7,10 +7,7 @@
 
 import Foundation
 
-struct News: Codable{
-    var news: [NewsOutputUnit]
-}
-
+//   Структура возвращаемых данных из api
 struct NewsOutputUnit: Codable, Identifiable{
     var id: Int
     var name: String
@@ -19,12 +16,7 @@ struct NewsOutputUnit: Codable, Identifiable{
     var image: String
 }
 
-
-
-struct Catalog: Codable{
-    var catalogUnit: [CatalogOutputUnit]
-}
-
+//   Структура возвращаемых данных из api
 struct CatalogOutputUnit: Codable, Identifiable{
     var id: Int
     var name: String
@@ -41,4 +33,23 @@ struct Category: Identifiable{
     var id: Int
     var name: String
     var isActive: Bool = false
+}
+
+
+//  Для объектов каталога и работы с ними
+struct CatalogItem: Identifiable{
+    
+    //  Приходязие с сервера значения
+    var id: Int
+    var name: String
+    var description: String
+    var price: String
+    var category: String
+    var time_result: String
+    var preparation: String
+    var bio: String
+    
+    //  Дополнительные, для удобства работы
+    var isInCart: Bool
+    var count: Int
 }

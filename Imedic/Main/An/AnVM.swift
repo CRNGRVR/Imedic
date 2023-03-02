@@ -155,4 +155,47 @@ class AnVM: ObservableObject{
     }
     
     
+    @Published var isShow = false
+    
+    @Published var selectedItem = CatalogOutputUnit(id: 0, name: "Нет такого объекта", description: "Совсем нету", price: "0", category: "Ошибка", time_result: "Никогда", preparation: "Нет", bio: "Нет")
+    
+    func catalogItemClick(id: Int){
+        
+        selectedItem = findObjectById(id: id)
+        isShow = true
+    }
+    
+    func findObjectById(id: Int) -> CatalogOutputUnit{
+        for item in filtredCatalogArr{
+            if item.id == id{
+                return item
+            }
+        }
+        
+        //  Если нет совпадения
+        return voidCatalogObject()
+    }
+    
+    func closeSheet(){
+        selectedItem = voidCatalogObject()
+    }
+    
+    //  Возврат объекта-заглушки, если нет настоящего
+    func voidCatalogObject() -> CatalogOutputUnit{
+        return CatalogOutputUnit(id: 0, name: "Нет такого объекта", description: "Совсем нету", price: "0", category: "Ошибка", time_result: "Никогда", preparation: "Нет", bio: "Нет")
+    }
+    
+    
+    
+    @Published var isShowCart = false
+    @Published var summ = 0
+    
+    func addToCart(){
+        
+    }
+    
+    func removeFromCart(){
+        
+    }
+    
 }
