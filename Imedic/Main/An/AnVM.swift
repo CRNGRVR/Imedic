@@ -46,8 +46,13 @@ class AnVM: ObservableObject{
         }
     }
     
+    //  Массив с элементами каталога
+    //  Объекты хранят информацию с сервера,
+    //  а также данные для работы с корзиной
+    var catalogItemArr: [CatalogItem] = []
+    
     //  Отфильтрованый каталог
-    @Published var filtredCatalogArr: [CatalogOutputUnit]  = []
+    @Published var filtredCatalogArr: [CatalogItem]  = []
     
     //  Имеются ли значения(для отображения)
     @Published var isNewsLoaded = false
@@ -149,7 +154,8 @@ class AnVM: ObservableObject{
     func filter(category: String){
         for item in catalogArr{
             if item.category == category{
-                filtredCatalogArr.append(item)
+                filtredCatalogArr.append(CatalogItem(id: item.id, name: item.name, description: item.description, price: item.price, category: item.category, time_result: item.time_result, preparation: item.preparation, bio: item.bio))
+                
             }
         }
     }
@@ -157,45 +163,53 @@ class AnVM: ObservableObject{
     
     @Published var isShow = false
     
-    @Published var selectedItem = CatalogOutputUnit(id: 0, name: "Нет такого объекта", description: "Совсем нету", price: "0", category: "Ошибка", time_result: "Никогда", preparation: "Нет", bio: "Нет")
+    @Published var selectedItemIndex = 0
     
     func catalogItemClick(id: Int){
         
-        selectedItem = findObjectById(id: id)
-        isShow = true
+        selectedItemIndex = findObjectIndexById(id: id)
+        
+        if filtredCatalogArr[selectedItemIndex].isInCart{
+            
+            filtredCatalogArr[selectedItemIndex].isInCart = false
+        }
+        else{
+            isShow = true
+        }
+        
     }
     
-    func findObjectById(id: Int) -> CatalogOutputUnit{
+    func findObjectIndexById(id: Int) -> Int {
+        
+        var index = 0
+        
         for item in filtredCatalogArr{
             if item.id == id{
-                return item
+                return index
             }
+            
+            index += 1
         }
         
         //  Если нет совпадения
-        return voidCatalogObject()
+        return 0
     }
     
     func closeSheet(){
-        selectedItem = voidCatalogObject()
-    }
-    
-    //  Возврат объекта-заглушки, если нет настоящего
-    func voidCatalogObject() -> CatalogOutputUnit{
-        return CatalogOutputUnit(id: 0, name: "Нет такого объекта", description: "Совсем нету", price: "0", category: "Ошибка", time_result: "Никогда", preparation: "Нет", bio: "Нет")
+        selectedItemIndex = 0
     }
     
     
+    @Published var cart: [CatalogItem] = []
     
     @Published var isShowCart = false
     @Published var summ = 0
     
     func addToCart(){
         
+        filtredCatalogArr[selectedItemIndex].isInCart = true
     }
     
-    func removeFromCart(){
-        
-    }
+    
     
 }

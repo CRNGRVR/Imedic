@@ -71,7 +71,7 @@ struct AnView: View {
                         ScrollView(.vertical, showsIndicators: false){
                             VStack(spacing: 16){
                                 ForEach(anVM.filtredCatalogArr){item in
-                                    CatalogBlock(anVM: anVM, id: item.id, title: item.name, duration: item.time_result, price: item.price)
+                                    CatalogBlock(anVM: anVM, id: item.id, title: item.name, duration: item.time_result, price: item.price, isInCart: item.isInCart)
                                 }
                             }
                         }
@@ -152,6 +152,7 @@ struct CatalogBlock: View{
     var title: String
     var duration: String
     var price: String
+    var isInCart: Bool
     
     var body: some View{
         
@@ -185,15 +186,26 @@ struct CatalogBlock: View{
                     Button(action: {
                         anVM.catalogItemClick(id: id)
                     }, label: {
-                        ZStack{
-                            Color("active")
-                                .frame(width: 96, height: 40)
-                                .cornerRadius(10)
-                            
-                            Text("Добавить")
-                                .foregroundColor(Color.white)
-                                .font(.system(size: 14))
+                        if !isInCart{
+                            ZStack{
+                                Color("active")
+                                    .frame(width: 96, height: 40)
+                                    .cornerRadius(10)
                                 
+                                Text("Добавить")
+                                    .foregroundColor(Color.white)
+                                    .font(.system(size: 14))
+                                    
+                            }
+                        }
+                        else{
+                            ZStack{
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color("active"), lineWidth: 1)
+                                    .frame(width: 96, height: 40)
+                                Text("Убрать")
+                                    .foregroundColor(Color("active"))
+                            }
                         }
                     })
                 }
@@ -221,7 +233,7 @@ struct ItemSheet: View{
                 
                 HStack{
                     
-                    Text(anVM.selectedItem.name)
+                    Text(anVM.filtredCatalogArr[anVM.selectedItemIndex].name)
                         .font(.system(size: 20, weight: .semibold))
                         //.frame(width: 310, height: 80 ,alignment: .topLeading)
                         .frame(minWidth: 310, maxWidth: 310, minHeight: 0, maxHeight: 80, alignment: .topLeading)
@@ -245,7 +257,7 @@ struct ItemSheet: View{
                         .padding(.bottom, 8)
                         .padding(.trailing, 270)
 
-                    Text(anVM.selectedItem.description)
+                    Text(anVM.filtredCatalogArr[anVM.selectedItemIndex].description)
                         .frame(width: 345, alignment: .topLeading)
                         .font(.system(size: 15))
                         .padding(.bottom, 16)
@@ -256,7 +268,7 @@ struct ItemSheet: View{
                         .padding(.bottom, 8)
                         .padding(.trailing, 255)
 
-                    Text(anVM.selectedItem.preparation)
+                    Text(anVM.filtredCatalogArr[anVM.selectedItemIndex].preparation)
                         .font(.system(size: 15))
                         .frame(width: 345, alignment: .topLeading)
                         .padding(.bottom, 44)
@@ -269,7 +281,7 @@ struct ItemSheet: View{
                                 .padding(.bottom, 4)
                                 .padding(.trailing, 40)
 
-                            Text(anVM.selectedItem.time_result)
+                            Text(anVM.filtredCatalogArr[anVM.selectedItemIndex].time_result)
                                 .font(.system(size: 16, weight: .semibold))
                                 .frame(width: 170, height: 70, alignment: .topLeading)
                         }
@@ -282,7 +294,7 @@ struct ItemSheet: View{
                                 .padding(.bottom, 4)
                                 .padding(.trailing, 70)
 
-                            Text(anVM.selectedItem.bio)
+                            Text(anVM.filtredCatalogArr[anVM.selectedItemIndex].bio)
                                 .font(.system(size: 16, weight: .semibold))
                                 .frame(width: 170, height: 70, alignment: .topLeading)
                                 
@@ -292,13 +304,13 @@ struct ItemSheet: View{
                 }
                 .frame(height: 450)
                 
-                Button(action: {}, label: {
+                Button(action: {anVM.addToCart()}, label: {
                     ZStack{
                         Color("active")
                             .frame(width: 335, height: 56)
                             .cornerRadius(10)
                         
-                        Text("Добавить за \(anVM.selectedItem.price) ₽")
+                        Text("Добавить за \(anVM.filtredCatalogArr[anVM.selectedItemIndex].price) ₽")
                             .foregroundColor(Color.white)
                             .font(.system(size: 17, weight: .semibold))
                     }

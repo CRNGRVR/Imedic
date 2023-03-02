@@ -50,6 +50,6 @@ struct CatalogItem: Identifiable{
     var bio: String
     
     //  Дополнительные, для удобства работы
-    var isInCart: Bool
-    var count: Int
+    var isInCart: Bool = false
+    var count: Int = 0
 }
