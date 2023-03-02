@@ -78,6 +78,22 @@ struct AnView: View {
                     }
                     .padding(.top, 20)
                 }
+                
+                if anVM.isShowCart{
+                    Button(action: {
+                        print(anVM.cart)
+                    }, label: {
+                        ZStack{
+                            Color("active")
+                                .frame(width: 335, height: 56)
+                                .cornerRadius(10)
+                            
+                            Text("В корзину \(anVM.summ) ₽")
+                                .foregroundColor(Color.white)
+                                .font(.system(size: 17, weight: .semibold))
+                        }
+                    })
+                }
             }
             
             
@@ -233,10 +249,11 @@ struct ItemSheet: View{
                 
                 HStack{
                     
-                    Text(anVM.filtredCatalogArr[anVM.selectedItemIndex].name)
+                    Text(anVM.catalogArr[anVM.selectedItemIndex].name)
                         .font(.system(size: 20, weight: .semibold))
                         //.frame(width: 310, height: 80 ,alignment: .topLeading)
                         .frame(minWidth: 310, maxWidth: 310, minHeight: 0, maxHeight: 80, alignment: .topLeading)
+                        .padding(.top, 10)
                     
                     Button(action: {anVM.isShow = false}, label: {
                         ZStack{
@@ -257,7 +274,7 @@ struct ItemSheet: View{
                         .padding(.bottom, 8)
                         .padding(.trailing, 270)
 
-                    Text(anVM.filtredCatalogArr[anVM.selectedItemIndex].description)
+                    Text(anVM.catalogArr[anVM.selectedItemIndex].description)
                         .frame(width: 345, alignment: .topLeading)
                         .font(.system(size: 15))
                         .padding(.bottom, 16)
@@ -268,7 +285,7 @@ struct ItemSheet: View{
                         .padding(.bottom, 8)
                         .padding(.trailing, 255)
 
-                    Text(anVM.filtredCatalogArr[anVM.selectedItemIndex].preparation)
+                    Text(anVM.catalogArr[anVM.selectedItemIndex].preparation)
                         .font(.system(size: 15))
                         .frame(width: 345, alignment: .topLeading)
                         .padding(.bottom, 44)
@@ -281,7 +298,7 @@ struct ItemSheet: View{
                                 .padding(.bottom, 4)
                                 .padding(.trailing, 40)
 
-                            Text(anVM.filtredCatalogArr[anVM.selectedItemIndex].time_result)
+                            Text(anVM.catalogArr[anVM.selectedItemIndex].time_result)
                                 .font(.system(size: 16, weight: .semibold))
                                 .frame(width: 170, height: 70, alignment: .topLeading)
                         }
@@ -294,7 +311,7 @@ struct ItemSheet: View{
                                 .padding(.bottom, 4)
                                 .padding(.trailing, 70)
 
-                            Text(anVM.filtredCatalogArr[anVM.selectedItemIndex].bio)
+                            Text(anVM.catalogArr[anVM.selectedItemIndex].bio)
                                 .font(.system(size: 16, weight: .semibold))
                                 .frame(width: 170, height: 70, alignment: .topLeading)
                                 
@@ -310,12 +327,13 @@ struct ItemSheet: View{
                             .frame(width: 335, height: 56)
                             .cornerRadius(10)
                         
-                        Text("Добавить за \(anVM.filtredCatalogArr[anVM.selectedItemIndex].price) ₽")
+                        Text("Добавить за \(anVM.catalogArr[anVM.selectedItemIndex].price) ₽")
                             .foregroundColor(Color.white)
                             .font(.system(size: 17, weight: .semibold))
                     }
                     
                 })
+                .padding(.bottom, 20)
             }
         }
     }
