@@ -17,7 +17,7 @@ class MainVM: ObservableObject{
     }
     
     //  Навигация по вкладкам
-    @Published var internalNav = ""
+    @Published var internalNav = "an"
     
     
     @Published var isActiveTabs = [true, false, false, false]

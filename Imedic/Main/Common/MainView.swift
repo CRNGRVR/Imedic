@@ -22,12 +22,11 @@ struct MainView: View {
             VStack(spacing: 0){
                 switch mainVM.internalNav{
                 case "an":
-                    AnView(nav: mainVM.nav) //  Возможно нав там не нужен
-                        //.padding(.top, 40)
+                    AnCartParentView(nav: mainVM.nav)
                 case "user":
                     UserView()
                     
-                default: AnView(nav: mainVM.nav)
+                default: Color.white
                         .padding(.top, 40)
                 }
                     

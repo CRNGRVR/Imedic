@@ -11,6 +11,8 @@
 		2C30F60429A90538001F322C /* CreatePasswordVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30F60329A90538001F322C /* CreatePasswordVM.swift */; };
 		2C30F60729A92E0D001F322C /* CreatePatientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30F60629A92E0D001F322C /* CreatePatientView.swift */; };
 		2C30F60929A92EB5001F322C /* tf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30F60829A92EB5001F322C /* tf.swift */; };
+		2C4CD4E729B222B90085F560 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4CD4E629B222B90085F560 /* CartView.swift */; };
+		2C4CD4E929B22C4C0085F560 /* AnCartParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4CD4E829B22C4C0085F560 /* AnCartParentView.swift */; };
 		2C740F8D29A7D31500F12781 /* CheckingEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C740F8C29A7D31500F12781 /* CheckingEmailView.swift */; };
 		2C904D0229A677330061304B /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C904D0129A677330061304B /* Onboarding.swift */; };
 		2C904D0429A678E20061304B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C904D0329A678E20061304B /* Launch Screen.storyboard */; };
@@ -19,7 +21,7 @@
 		2C904D0D29A696290061304B /* Register_Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C904D0C29A696290061304B /* Register_Auth.swift */; };
 		2C904D0F29A696750061304B /* Register_Auth_VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C904D0E29A696750061304B /* Register_Auth_VM.swift */; };
 		2CB3437929ACD89E008A8716 /* AnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB3437829ACD89E008A8716 /* AnView.swift */; };
-		2CB3437B29ACD8B2008A8716 /* AnVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB3437A29ACD8B2008A8716 /* AnVM.swift */; };
+		2CB3437B29ACD8B2008A8716 /* AnCartVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB3437A29ACD8B2008A8716 /* AnCartVM.swift */; };
 		2CB3437D29ACE403008A8716 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB3437C29ACE403008A8716 /* UserView.swift */; };
 		2CB3438029ACE69B008A8716 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2CB3437F29ACE69B008A8716 /* SDWebImageSwiftUI */; };
 		2CB571E929A6507700278688 /* ImedicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB571E829A6507700278688 /* ImedicApp.swift */; };
@@ -41,6 +43,8 @@
 		2C30F60329A90538001F322C /* CreatePasswordVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordVM.swift; sourceTree = "<group>"; };
 		2C30F60629A92E0D001F322C /* CreatePatientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePatientView.swift; sourceTree = "<group>"; };
 		2C30F60829A92EB5001F322C /* tf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tf.swift; sourceTree = "<group>"; };
+		2C4CD4E629B222B90085F560 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		2C4CD4E829B22C4C0085F560 /* AnCartParentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnCartParentView.swift; sourceTree = "<group>"; };
 		2C740F8C29A7D31500F12781 /* CheckingEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckingEmailView.swift; sourceTree = "<group>"; };
 		2C904D0129A677330061304B /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		2C904D0329A678E20061304B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -49,7 +53,7 @@
 		2C904D0C29A696290061304B /* Register_Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register_Auth.swift; sourceTree = "<group>"; };
 		2C904D0E29A696750061304B /* Register_Auth_VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register_Auth_VM.swift; sourceTree = "<group>"; };
 		2CB3437829ACD89E008A8716 /* AnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnView.swift; sourceTree = "<group>"; };
-		2CB3437A29ACD8B2008A8716 /* AnVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnVM.swift; sourceTree = "<group>"; };
+		2CB3437A29ACD8B2008A8716 /* AnCartVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnCartVM.swift; sourceTree = "<group>"; };
 		2CB3437C29ACE403008A8716 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		2CB571E529A6507700278688 /* Imedic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Imedic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB571E829A6507700278688 /* ImedicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImedicApp.swift; sourceTree = "<group>"; };
@@ -94,6 +98,14 @@
 				2CFF374729ABBB7500981131 /* CreatePatientVM.swift */,
 			);
 			path = CreatePatient;
+			sourceTree = "<group>";
+		};
+		2C4CD4E529B222A00085F560 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				2C4CD4E629B222B90085F560 /* CartView.swift */,
+			);
+			path = Cart;
 			sourceTree = "<group>";
 		};
 		2C740F8B29A7D2F100F12781 /* CheckingEmail */ = {
@@ -142,7 +154,6 @@
 			children = (
 				2CFF15FD29AC951800F90A3D /* AnModel.swift */,
 				2CB3437829ACD89E008A8716 /* AnView.swift */,
-				2CB3437A29ACD8B2008A8716 /* AnVM.swift */,
 			);
 			path = An;
 			sourceTree = "<group>";
@@ -174,6 +185,8 @@
 			children = (
 				2CFF15F929AC94F800F90A3D /* MainView.swift */,
 				2CFF15FB29AC950200F90A3D /* MainVM.swift */,
+				2CB3437A29ACD8B2008A8716 /* AnCartVM.swift */,
+				2C4CD4E829B22C4C0085F560 /* AnCartParentView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -221,6 +234,7 @@
 		2CFF15F829AC94E400F90A3D /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				2C4CD4E529B222A00085F560 /* Cart */,
 				2CB3437729ACD85E008A8716 /* Common */,
 				2CB3437629ACD836008A8716 /* User */,
 				2CB3437529ACD827008A8716 /* Sup */,
@@ -313,7 +327,8 @@
 				2C904D0229A677330061304B /* Onboarding.swift in Sources */,
 				2CFF374629AB400700981131 /* CheckingEmailVM.swift in Sources */,
 				2C30F60729A92E0D001F322C /* CreatePatientView.swift in Sources */,
-				2CB3437B29ACD8B2008A8716 /* AnVM.swift in Sources */,
+				2CB3437B29ACD8B2008A8716 /* AnCartVM.swift in Sources */,
+				2C4CD4E729B222B90085F560 /* CartView.swift in Sources */,
 				2C740F8D29A7D31500F12781 /* CheckingEmailView.swift in Sources */,
 				2C30F60429A90538001F322C /* CreatePasswordVM.swift in Sources */,
 				2CFF15FE29AC951800F90A3D /* AnModel.swift in Sources */,
@@ -331,6 +346,7 @@
 				2CFF374D29ABC15100981131 /* Register_Auth_Model.swift in Sources */,
 				2C904D0629A67B320061304B /* OnboardingVM.swift in Sources */,
 				2C30F60929A92EB5001F322C /* tf.swift in Sources */,
+				2C4CD4E929B22C4C0085F560 /* AnCartParentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

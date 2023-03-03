@@ -10,15 +10,12 @@ import SDWebImageSwiftUI
 
 struct AnView: View {
     
-    @ObservedObject var anVM: AnVM
-    init(nav: NavVm){
-        anVM = AnVM(nav: nav)
-    }
+    @ObservedObject var anCartVM: AnCartVM
     
     var body: some View {
         ZStack{
             VStack{
-                tf(text: $anVM.find, placeHolder: "Искать анализы")
+                tf(text: $anCartVM.find, placeHolder: "Искать анализы")
                 
                 ScrollView(.vertical, showsIndicators: false){
                     VStack{
@@ -29,9 +26,9 @@ struct AnView: View {
                         
                         //  Блок новостей
                         ScrollView(.horizontal, showsIndicators: false){
-                            if anVM.isNewsLoaded{
+                            if anCartVM.isNewsLoaded{
                                 HStack(spacing: 16){
-                                    ForEach(anVM.newsArr){news in
+                                    ForEach(anCartVM.newsArr){news in
                                         NewsBlock(title: news.name, descript: news.description, price: news.price, imageURL: news.image)
                                     }
                                 }
@@ -47,12 +44,12 @@ struct AnView: View {
                         //  Фильтры по категориям
                         ScrollView(.horizontal, showsIndicators: false){
                             HStack(spacing: 16){
-                                ForEach(anVM.categories){category in
-                                    Button(action: {anVM.categoryClick(current: category.id)}, label: {
+                                ForEach(anCartVM.categories){category in
+                                    Button(action: {anCartVM.categoryClick(current: category.id)}, label: {
                                         
                                         ZStack{
                                             Color(category.isActive ? "active" : "tf")
-                                                .frame(width: anVM.calcButtonWidth(word: category.name), height: 48)
+                                                .frame(width: anCartVM.calcButtonWidth(word: category.name), height: 48)
                                                 .cornerRadius(10)
                                             
                                             Text(category.name)
@@ -70,8 +67,8 @@ struct AnView: View {
                         //  Каталог
                         ScrollView(.vertical, showsIndicators: false){
                             VStack(spacing: 16){
-                                ForEach(anVM.filtredCatalogArr){item in
-                                    CatalogBlock(anVM: anVM, id: item.id, title: item.name, duration: item.time_result, price: item.price, isInCart: item.isInCart)
+                                ForEach(anCartVM.filtredCatalogArr){item in
+                                    CatalogBlock(anVM: anCartVM, id: item.id, title: item.name, duration: item.time_result, price: item.price, isInCart: item.isInCart)
                                 }
                             }
                         }
@@ -79,16 +76,16 @@ struct AnView: View {
                     .padding(.top, 20)
                 }
                 
-                if anVM.isShowCart{
+                if anCartVM.isShowCart{
                     Button(action: {
-                        print(anVM.cart)
+                        anCartVM.goToCart()
                     }, label: {
                         ZStack{
                             Color("active")
                                 .frame(width: 335, height: 56)
                                 .cornerRadius(10)
                             
-                            Text("В корзину \(anVM.summ) ₽")
+                            Text("В корзину \(anCartVM.summ) ₽")
                                 .foregroundColor(Color.white)
                                 .font(.system(size: 17, weight: .semibold))
                         }
@@ -99,7 +96,7 @@ struct AnView: View {
             
             
             
-            if anVM.isShow{
+            if anCartVM.isShow{
                 
                 ZStack{
                     Color.black
@@ -107,13 +104,13 @@ struct AnView: View {
                         .ignoresSafeArea(.all)
                         .padding(.bottom, 300)
                     
-                    ItemSheet(anVM: anVM)
+                    ItemSheet(anVM: anCartVM)
                     .padding(.top, 235)
                 }
             }
         }
         .onAppear{
-            anVM.getAll()
+            anCartVM.getAll()
         }
     }
 }
@@ -162,7 +159,7 @@ struct NewsBlock: View{
 
 struct CatalogBlock: View{
     
-    @ObservedObject var anVM: AnVM
+    @ObservedObject var anVM: AnCartVM
     
     var id: Int
     var title: String
@@ -236,7 +233,7 @@ struct CatalogBlock: View{
 //  заданию, но иначе текст физически не умещается на экране
 struct ItemSheet: View{
     
-    @ObservedObject var anVM: AnVM
+    @ObservedObject var anVM: AnCartVM
 
     var body: some View{
         ZStack{
@@ -351,6 +348,6 @@ struct AnView_Previews: PreviewProvider {
         
         //NewsBlock(title: "Результаты ПЦР-теста на COVID-19 за 3 часа", descript: "Теперь результат ПЦР-теста на COVID-19 можно получить уже через 3 часа!", price: "1400", imageURL: "https://medic.madskill.ru/filemanager/uploads/pngwing.com (4).png")
         
-        ItemSheet(anVM: AnVM(nav: NavVm()))
+        ItemSheet(anVM: AnCartVM(nav: NavVm()))
     }
 }
