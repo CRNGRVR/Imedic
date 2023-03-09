@@ -46,6 +46,9 @@ struct CheckingEmailView: View {
         .onAppear{
             checkingemailVM.sheduleTimer()
         }
+        .alert(isPresented: $checkingemailVM.isErr){
+            Alert(title: Text("Проблемы c cетью"))
+        }
     }
-        
+    
 }

@@ -50,6 +50,9 @@ class AnCartVM: ObservableObject{
         }
     }
     
+    @Published var isErr = false
+    
+    
     //  Основной массив с элементами каталога.
     //  Объекты хранят информацию с сервера,
     //  а также данные для работы с корзиной
@@ -111,7 +114,7 @@ class AnCartVM: ObservableObject{
                     self.catalogArr = responce.value!
                 }
                 else{
-                    print("Error")
+                    self.isErr = true
                 }
             }
     }
@@ -138,7 +141,7 @@ class AnCartVM: ObservableObject{
             }
             
             for yet in categories{
-                
+    
                 if category.category == yet.name{
                     new = false
                 }

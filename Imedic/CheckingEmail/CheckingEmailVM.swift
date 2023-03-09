@@ -23,7 +23,7 @@ class CheckingEmailVM: ObservableObject{
         }
     }
     
-    @Published var secondsToSend = 59
+    @Published var secondsToSend = 90
     var stop = false
     
     //  Запускает таймер до повторной отправки кода, как только загрузилась страница
@@ -47,8 +47,10 @@ class CheckingEmailVM: ObservableObject{
         }
     }
     
+    @Published var isErr = false
+    
     func sendAgain(){
-        print("Отправка")
+        check()
     }
     
     func check(){
@@ -64,6 +66,9 @@ class CheckingEmailVM: ObservableObject{
                     self.stop = true
                     self.next()
                 }
+                else{
+                    self.isErr = true
+                }
             }
     }
     
@@ -73,6 +78,11 @@ class CheckingEmailVM: ObservableObject{
     }
     
     func next(){
-        nav.currentScreen = "create_password"
+        if nav.isPasswordEntered{
+            nav.currentScreen = "create_patient"
+        }
+        else{
+            nav.currentScreen = "create_password"
+        }
     }
 }

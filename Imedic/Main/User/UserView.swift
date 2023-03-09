@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct UserView: View {
+    
+    @ObservedObject var userVM = UserVM()
+    
     var body: some View {
         Text("User")
     }
 }
 
-struct UserView_Previews: PreviewProvider {
-    static var previews: some View {
-        UserView()
-    }
-}
+//struct UserView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        UserView()
+//    }
+//}

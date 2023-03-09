@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class CreatePatientVM: ObservableObject{
     
@@ -31,6 +32,29 @@ class CreatePatientVM: ObservableObject{
         else{
             isSetCardAllowed = false
         }
+    }
+    
+    
+    func clickSend(){
+        
+        if isSetCardAllowed{
+            pushToServer()
+        }
+    }
+    
+    
+    func pushToServer(){
+        
+        let params = ["firstname": name, "lastname": fam, "middlename": otch, "bith": date, "pol": pol, "image": "0"]
+        let headers: HTTPHeaders = ["Authorization": "Bearer \(nav.token)"]
+        
+        AF
+            .request("https://medic.madskill.ru/api/createProfile", method: .post, parameters: params, headers: headers)
+            .responseString(){ resp in
+                if resp.value != nil{
+                    print(String(resp.value!))
+                }
+            }
     }
     
     func skip(){

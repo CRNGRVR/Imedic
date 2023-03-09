@@ -83,6 +83,9 @@ struct Register_Auth: View {
             
             
         }
+        .alert(isPresented: $reg_auth_vm.isError){
+            Alert(title: Text("Проблемы c cетью"))
+        }
         
         
     }

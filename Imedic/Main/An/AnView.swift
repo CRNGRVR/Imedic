@@ -92,6 +92,9 @@ struct AnView: View {
                     })
                 }
             }
+            .alert(isPresented: $anCartVM.isErr){
+                Alert(title: Text("Проблемы c cетью"))
+            }
             
             
             

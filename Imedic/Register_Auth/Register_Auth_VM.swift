@@ -23,6 +23,8 @@ class Reg_AuthVM: ObservableObject{
     
     @Published var isSendAllowed = false
     
+    @Published var isError = false
+    
     func checkPattern(){
         
         //  Разрешена ли отправка
@@ -98,7 +100,7 @@ class Reg_AuthVM: ObservableObject{
                         }
                     }
                     else{
-                        print("Error")
+                        self.isError = true
                     }
                 }
         }

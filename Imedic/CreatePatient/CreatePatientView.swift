@@ -53,7 +53,7 @@ struct CreatePatientView: View {
             }
             .padding(.bottom, 48)
             
-            Button(action: {}, label: {
+            Button(action: {createPatientVm.clickSend()}, label: {
                 ZStack{
                     Color.blue
                         .opacity(createPatientVm.isSetCardAllowed ? 1 : 0.5)

@@ -32,6 +32,7 @@ struct ParentView: View {
 //        }
         
         MainView(nav: navVm)
+        //CreatePatientView(nav: navVm)
     }
 }
 

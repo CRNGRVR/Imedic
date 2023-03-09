@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C089DDA29B49182005A2CCE /* SupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C089DD929B49182005A2CCE /* SupView.swift */; };
+		2C089DDE29B49201005A2CCE /* ResView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C089DDD29B49201005A2CCE /* ResView.swift */; };
+		2C089DE029B494F3005A2CCE /* UserVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C089DDF29B494F3005A2CCE /* UserVM.swift */; };
 		2C30F60229A9052C001F322C /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30F60129A9052C001F322C /* CreatePasswordView.swift */; };
 		2C30F60429A90538001F322C /* CreatePasswordVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30F60329A90538001F322C /* CreatePasswordVM.swift */; };
 		2C30F60729A92E0D001F322C /* CreatePatientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30F60629A92E0D001F322C /* CreatePatientView.swift */; };
@@ -39,6 +42,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C089DD929B49182005A2CCE /* SupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupView.swift; sourceTree = "<group>"; };
+		2C089DDD29B49201005A2CCE /* ResView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResView.swift; sourceTree = "<group>"; };
+		2C089DDF29B494F3005A2CCE /* UserVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVM.swift; sourceTree = "<group>"; };
 		2C30F60129A9052C001F322C /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
 		2C30F60329A90538001F322C /* CreatePasswordVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordVM.swift; sourceTree = "<group>"; };
 		2C30F60629A92E0D001F322C /* CreatePatientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePatientView.swift; sourceTree = "<group>"; };
@@ -161,6 +167,7 @@
 		2CB3437429ACD81A008A8716 /* Res */ = {
 			isa = PBXGroup;
 			children = (
+				2C089DDD29B49201005A2CCE /* ResView.swift */,
 			);
 			path = Res;
 			sourceTree = "<group>";
@@ -168,6 +175,7 @@
 		2CB3437529ACD827008A8716 /* Sup */ = {
 			isa = PBXGroup;
 			children = (
+				2C089DD929B49182005A2CCE /* SupView.swift */,
 			);
 			path = Sup;
 			sourceTree = "<group>";
@@ -176,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				2CB3437C29ACE403008A8716 /* UserView.swift */,
+				2C089DDF29B494F3005A2CCE /* UserVM.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -328,6 +337,7 @@
 				2CFF374629AB400700981131 /* CheckingEmailVM.swift in Sources */,
 				2C30F60729A92E0D001F322C /* CreatePatientView.swift in Sources */,
 				2CB3437B29ACD8B2008A8716 /* AnCartVM.swift in Sources */,
+				2C089DDE29B49201005A2CCE /* ResView.swift in Sources */,
 				2C4CD4E729B222B90085F560 /* CartView.swift in Sources */,
 				2C740F8D29A7D31500F12781 /* CheckingEmailView.swift in Sources */,
 				2C30F60429A90538001F322C /* CreatePasswordVM.swift in Sources */,
@@ -338,7 +348,9 @@
 				2CB3437D29ACE403008A8716 /* UserView.swift in Sources */,
 				2CB571EB29A6507700278688 /* ParentView.swift in Sources */,
 				2C904D0F29A696750061304B /* Register_Auth_VM.swift in Sources */,
+				2C089DE029B494F3005A2CCE /* UserVM.swift in Sources */,
 				2CFF15FA29AC94F800F90A3D /* MainView.swift in Sources */,
+				2C089DDA29B49182005A2CCE /* SupView.swift in Sources */,
 				2CB3437929ACD89E008A8716 /* AnView.swift in Sources */,
 				2C30F60229A9052C001F322C /* CreatePasswordView.swift in Sources */,
 				2CFF15FC29AC950200F90A3D /* MainVM.swift in Sources */,

@@ -25,6 +25,12 @@ struct MainView: View {
                     AnCartParentView(nav: mainVM.nav)
                 case "user":
                     UserView()
+                case "sup":
+                    SupView()
+                        .frame(height: 670)
+                case "res":
+                    ResView()
+                        .frame(height: 670)
                     
                 default: Color.white
                         .padding(.top, 40)
