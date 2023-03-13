@@ -130,6 +130,9 @@ class AnCartVM: ObservableObject{
         for item in catalogArr{
             catalogItemArr.append(CatalogItem(id: item.id, name: item.name, description: item.description, price: item.price, category: item.category, time_result: item.time_result, preparation: item.preparation, bio: item.bio))
         }
+        
+        //  Извлечение данных из хранилища и заполнение корзины
+        fillStoredDataAtStart()
     }
     
     //  Показывает имеющиеся категории анализов без повторений
@@ -212,23 +215,29 @@ class AnCartVM: ObservableObject{
     }
     
     //  Отображение карточки с описанием
-    @Published var isShow = false
+    @Published var isShowDescriptionCard = false
     
     //  Нажатый объект, используется при отображении
     //  карточки с описанием
     @Published var selectedItemIndex = 0
     
-    func catalogItemClick(id: Int){
+    func catalogItemButtonClick(id: Int){
         
         selectedItemIndex = findObjectIndexById(id: id)
         
         if catalogItemArr[selectedItemIndex].isInCart{
-
             removeFromCartByCartId(id: id)
         }
         else{
-            isShow = true
+            addToCart()
         }
+    }
+    
+    func catalogItemFreeClick(id: Int){
+        
+        selectedItemIndex = findObjectIndexById(id: id)
+        
+        isShowDescriptionCard = true
     }
     
     //  Поиск элемента в массиве по его id
@@ -305,7 +314,7 @@ class AnCartVM: ObservableObject{
         filter(category: currentCategory)
         
         //  После добавления экран с описанием более не нужен
-        isShow = false
+        isShowDescriptionCard = false
         
         addItemInCartStorage(item: catalogItemArr[selectedItemIndex])
         //print(getCartFromStorage()[0].name)
@@ -324,6 +333,7 @@ class AnCartVM: ObservableObject{
         catalogItemArr[selectedItemIndex].count = 0
     
         cart.remove(at: findObjectIndexInCart(id: id))
+        delete(id: id)
         
         filter(category: currentCategory)
     }
@@ -337,12 +347,19 @@ class AnCartVM: ObservableObject{
         catalogItemArr[findObjectIndexById(id: id)].count = 0
         
         
-        findElementInStorage(id: id)
+        delete(id: id)
         refreshCart()
     }
     
     func increaseItemInCart(id: Int){
+        
         catalogItemArr[findObjectIndexById(id: id)].count += 1
+        
+        let countForSet = catalogItemArr[findObjectIndexById(id: id)].count
+        
+        let thisElementInStorage = findElementInStorage(id: id)
+        thisElementInStorage?.setValue(countForSet, forKey: "count")
+        save()
         refreshCart()
     }
     
@@ -355,6 +372,12 @@ class AnCartVM: ObservableObject{
         }
         else{
             catalogItemArr[index].count -= 1
+            
+            let countForSet = catalogItemArr[findObjectIndexById(id: id)].count
+            
+            let thisElementInStorage = findElementInStorage(id: id)
+            thisElementInStorage?.setValue(countForSet, forKey: "count")
+            save()
         }
         
         refreshCart()
@@ -366,6 +389,9 @@ class AnCartVM: ObservableObject{
             catalogItemArr[i].isInCart = false
             catalogItemArr[i].count = 0
         }
+        
+        //  Хранилище тоже очищается
+        deleteAll()
         
         refreshCart()
     }
@@ -463,6 +489,24 @@ class AnCartVM: ObservableObject{
         }
     }
     
+    
+    func fillStoredDataAtStart(){
+        var dataFromStorage = getCartFromStorage()
+        
+        if !dataFromStorage.isEmpty{
+            for i in 0...catalogItemArr.count - 1{
+                for j in 0...dataFromStorage.count - 1{
+                    if catalogItemArr[i].id == dataFromStorage[j].id_item{
+                        catalogItemArr[i].isInCart = dataFromStorage[j].is_in_cart
+                        catalogItemArr[i].count = Int(dataFromStorage[j].count)
+                    }
+                }
+            }
+        }
+        
+        refreshCart()
+    }
+    
     func addItemInCartStorage(item: CatalogItem){
         
         let newCartItem = CartItem(context: CartPersistenceController.shared.viewContext)
@@ -474,7 +518,7 @@ class AnCartVM: ObservableObject{
         newCartItem.price = item.price
         newCartItem.id_item = Int32(item.id)
         newCartItem.bio = item.bio
-        newCartItem.is_in_cart = item.isInCart
+        newCartItem.is_in_cart = true
         newCartItem.prep = item.preparation
         newCartItem.time = item.time_result
         
@@ -517,5 +561,22 @@ class AnCartVM: ObservableObject{
             return nil
         }
         
+    }
+    
+    func deleteAll(){
+        
+        let request: NSFetchRequest<CartItem> = CartItem.fetchRequest()
+        
+        do{
+            let items = try CartPersistenceController.shared.viewContext.fetch(request)
+            for item in items{
+                CartPersistenceController.shared.viewContext.delete(item)
+            }
+            
+            save()
+        }
+        catch{
+            print("(")
+        }
     }
 }

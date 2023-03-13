@@ -97,13 +97,7 @@ struct AnView: View {
             }
             
             
-//            ForEach(anCartVM.storeCart){item in
-//                VStack{
-//                    Text(item.name ?? "Ошибка")
-//                }
-//            }
-            
-            if anCartVM.isShow{
+            if anCartVM.isShowDescriptionCard{
                 
                 ZStack{
                     Color.black
@@ -204,7 +198,7 @@ struct CatalogBlock: View{
                     
                     
                     Button(action: {
-                        anVM.catalogItemClick(id: id)
+                        anVM.catalogItemButtonClick(id: id)
                     }, label: {
                         if !isInCart{
                             ZStack{
@@ -231,6 +225,9 @@ struct CatalogBlock: View{
                 }
             }
             
+        }
+        .onTapGesture {
+            anVM.catalogItemFreeClick(id: id)
         }
     }
 }
@@ -259,7 +256,7 @@ struct ItemSheet: View{
                         .frame(minWidth: 310, maxWidth: 310, minHeight: 0, maxHeight: 80, alignment: .topLeading)
                         .padding(.top, 10)
                     
-                    Button(action: {anVM.isShow = false}, label: {
+                    Button(action: {anVM.isShowDescriptionCard = false}, label: {
                         ZStack{
                             Color("tf")
                                 .frame(width: 24, height: 24)
