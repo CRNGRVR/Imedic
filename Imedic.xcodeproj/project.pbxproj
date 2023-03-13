@@ -10,12 +10,15 @@
 		2C089DDA29B49182005A2CCE /* SupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C089DD929B49182005A2CCE /* SupView.swift */; };
 		2C089DDE29B49201005A2CCE /* ResView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C089DDD29B49201005A2CCE /* ResView.swift */; };
 		2C089DE029B494F3005A2CCE /* UserVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C089DDF29B494F3005A2CCE /* UserVM.swift */; };
+		2C2D32AA29BDD1740091D1C4 /* PreloaderVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D32A929BDD1740091D1C4 /* PreloaderVM.swift */; };
+		2C2D32AD29BDD18C0091D1C4 /* PreloaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D32AC29BDD18C0091D1C4 /* PreloaderView.swift */; };
 		2C30F60229A9052C001F322C /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30F60129A9052C001F322C /* CreatePasswordView.swift */; };
 		2C30F60429A90538001F322C /* CreatePasswordVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30F60329A90538001F322C /* CreatePasswordVM.swift */; };
 		2C30F60729A92E0D001F322C /* CreatePatientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30F60629A92E0D001F322C /* CreatePatientView.swift */; };
 		2C30F60929A92EB5001F322C /* tf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30F60829A92EB5001F322C /* tf.swift */; };
 		2C4CD4E729B222B90085F560 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4CD4E629B222B90085F560 /* CartView.swift */; };
 		2C4CD4E929B22C4C0085F560 /* AnCartParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4CD4E829B22C4C0085F560 /* AnCartParentView.swift */; };
+		2C562FA729BDB6CC0047774F /* CartPersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C562FA629BDB6CC0047774F /* CartPersistenceController.swift */; };
 		2C740F8D29A7D31500F12781 /* CheckingEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C740F8C29A7D31500F12781 /* CheckingEmailView.swift */; };
 		2C904D0229A677330061304B /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C904D0129A677330061304B /* Onboarding.swift */; };
 		2C904D0429A678E20061304B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C904D0329A678E20061304B /* Launch Screen.storyboard */; };
@@ -31,6 +34,7 @@
 		2CB571EB29A6507700278688 /* ParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB571EA29A6507700278688 /* ParentView.swift */; };
 		2CB571ED29A6507900278688 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CB571EC29A6507900278688 /* Assets.xcassets */; };
 		2CB571F029A6507900278688 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CB571EF29A6507900278688 /* Preview Assets.xcassets */; };
+		2CE9EFCC29B9F7CD0066C3EA /* CartDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CE9EFCA29B9F7CD0066C3EA /* CartDataModel.xcdatamodeld */; };
 		2CFF15FA29AC94F800F90A3D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF15F929AC94F800F90A3D /* MainView.swift */; };
 		2CFF15FC29AC950200F90A3D /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF15FB29AC950200F90A3D /* MainVM.swift */; };
 		2CFF15FE29AC951800F90A3D /* AnModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF15FD29AC951800F90A3D /* AnModel.swift */; };
@@ -45,12 +49,15 @@
 		2C089DD929B49182005A2CCE /* SupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupView.swift; sourceTree = "<group>"; };
 		2C089DDD29B49201005A2CCE /* ResView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResView.swift; sourceTree = "<group>"; };
 		2C089DDF29B494F3005A2CCE /* UserVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVM.swift; sourceTree = "<group>"; };
+		2C2D32A929BDD1740091D1C4 /* PreloaderVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreloaderVM.swift; sourceTree = "<group>"; };
+		2C2D32AC29BDD18C0091D1C4 /* PreloaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreloaderView.swift; sourceTree = "<group>"; };
 		2C30F60129A9052C001F322C /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
 		2C30F60329A90538001F322C /* CreatePasswordVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordVM.swift; sourceTree = "<group>"; };
 		2C30F60629A92E0D001F322C /* CreatePatientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePatientView.swift; sourceTree = "<group>"; };
 		2C30F60829A92EB5001F322C /* tf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tf.swift; sourceTree = "<group>"; };
 		2C4CD4E629B222B90085F560 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		2C4CD4E829B22C4C0085F560 /* AnCartParentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnCartParentView.swift; sourceTree = "<group>"; };
+		2C562FA629BDB6CC0047774F /* CartPersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPersistenceController.swift; sourceTree = "<group>"; };
 		2C740F8C29A7D31500F12781 /* CheckingEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckingEmailView.swift; sourceTree = "<group>"; };
 		2C904D0129A677330061304B /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		2C904D0329A678E20061304B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -66,6 +73,7 @@
 		2CB571EA29A6507700278688 /* ParentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentView.swift; sourceTree = "<group>"; };
 		2CB571EC29A6507900278688 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CB571EF29A6507900278688 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2CE9EFCB29B9F7CD0066C3EA /* CartDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CartDataModel.xcdatamodel; sourceTree = "<group>"; };
 		2CFF15F929AC94F800F90A3D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		2CFF15FB29AC950200F90A3D /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
 		2CFF15FD29AC951800F90A3D /* AnModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnModel.swift; sourceTree = "<group>"; };
@@ -88,6 +96,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C2D32AB29BDD17A0091D1C4 /* Preloader */ = {
+			isa = PBXGroup;
+			children = (
+				2C2D32A929BDD1740091D1C4 /* PreloaderVM.swift */,
+				2C2D32AC29BDD18C0091D1C4 /* PreloaderView.swift */,
+			);
+			path = Preloader;
+			sourceTree = "<group>";
+		};
 		2C30F60029A90511001F322C /* CreatePassword */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +213,8 @@
 				2CFF15FB29AC950200F90A3D /* MainVM.swift */,
 				2CB3437A29ACD8B2008A8716 /* AnCartVM.swift */,
 				2C4CD4E829B22C4C0085F560 /* AnCartParentView.swift */,
+				2CE9EFCA29B9F7CD0066C3EA /* CartDataModel.xcdatamodeld */,
+				2C562FA629BDB6CC0047774F /* CartPersistenceController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -243,6 +262,7 @@
 		2CFF15F829AC94E400F90A3D /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				2C2D32AB29BDD17A0091D1C4 /* Preloader */,
 				2C4CD4E529B222A00085F560 /* Cart */,
 				2CB3437729ACD85E008A8716 /* Common */,
 				2CB3437629ACD836008A8716 /* User */,
@@ -339,10 +359,13 @@
 				2CB3437B29ACD8B2008A8716 /* AnCartVM.swift in Sources */,
 				2C089DDE29B49201005A2CCE /* ResView.swift in Sources */,
 				2C4CD4E729B222B90085F560 /* CartView.swift in Sources */,
+				2CE9EFCC29B9F7CD0066C3EA /* CartDataModel.xcdatamodeld in Sources */,
 				2C740F8D29A7D31500F12781 /* CheckingEmailView.swift in Sources */,
+				2C2D32AD29BDD18C0091D1C4 /* PreloaderView.swift in Sources */,
 				2C30F60429A90538001F322C /* CreatePasswordVM.swift in Sources */,
 				2CFF15FE29AC951800F90A3D /* AnModel.swift in Sources */,
 				2C904D0829A681270061304B /* NavVM.swift in Sources */,
+				2C562FA729BDB6CC0047774F /* CartPersistenceController.swift in Sources */,
 				2C904D0D29A696290061304B /* Register_Auth.swift in Sources */,
 				2CFF374F29ABC83700981131 /* CheckingEmailModel.swift in Sources */,
 				2CB3437D29ACE403008A8716 /* UserView.swift in Sources */,
@@ -353,6 +376,7 @@
 				2C089DDA29B49182005A2CCE /* SupView.swift in Sources */,
 				2CB3437929ACD89E008A8716 /* AnView.swift in Sources */,
 				2C30F60229A9052C001F322C /* CreatePasswordView.swift in Sources */,
+				2C2D32AA29BDD1740091D1C4 /* PreloaderVM.swift in Sources */,
 				2CFF15FC29AC950200F90A3D /* MainVM.swift in Sources */,
 				2CB571E929A6507700278688 /* ImedicApp.swift in Sources */,
 				2CFF374D29ABC15100981131 /* Register_Auth_Model.swift in Sources */,
@@ -487,6 +511,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Imedic/Preview Content\"";
+				DEVELOPMENT_TEAM = N5Q5NU635P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -517,6 +542,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Imedic/Preview Content\"";
+				DEVELOPMENT_TEAM = N5Q5NU635P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -593,6 +619,19 @@
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		2CE9EFCA29B9F7CD0066C3EA /* CartDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2CE9EFCB29B9F7CD0066C3EA /* CartDataModel.xcdatamodel */,
+			);
+			currentVersion = 2CE9EFCB29B9F7CD0066C3EA /* CartDataModel.xcdatamodel */;
+			path = CartDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2CB571DD29A6507600278688 /* Project object */;
 }

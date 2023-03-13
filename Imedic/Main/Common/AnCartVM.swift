@@ -7,10 +7,13 @@
 
 import Foundation
 import Alamofire
+import SwiftUI
+import CoreData
 
 class AnCartVM: ObservableObject{
     
     @Published var nav: NavVm
+    
     init(nav: NavVm) {
         self.nav = nav
     }
@@ -49,6 +52,7 @@ class AnCartVM: ObservableObject{
             }
         }
     }
+    
     
     @Published var isErr = false
     
@@ -302,6 +306,13 @@ class AnCartVM: ObservableObject{
         
         //  После добавления экран с описанием более не нужен
         isShow = false
+        
+        addItemInCartStorage(item: catalogItemArr[selectedItemIndex])
+        //print(getCartFromStorage()[0].name)
+        
+//        for item in getCartFromStorage(){
+//            print(item.name)
+//        }
     }
     
     //  Удаление из корзины
@@ -325,6 +336,8 @@ class AnCartVM: ObservableObject{
         catalogItemArr[findObjectIndexById(id: id)].isInCart = false
         catalogItemArr[findObjectIndexById(id: id)].count = 0
         
+        
+        findElementInStorage(id: id)
         refreshCart()
     }
     
@@ -427,5 +440,82 @@ class AnCartVM: ObservableObject{
         else{
             return "пациентов"
         }
+    }
+    
+    
+    func goToOrder(){
+        anCartNav = "preloader"
+    }
+    
+    
+    
+    
+    func getCartFromStorage() -> [CartItem]{
+        
+        let request: NSFetchRequest<CartItem> = CartItem.fetchRequest()
+        
+        do{
+            return try CartPersistenceController.shared.viewContext.fetch(request)
+        }
+        catch{
+            print("Проблема с извлечением данных")
+            return []
+        }
+    }
+    
+    func addItemInCartStorage(item: CatalogItem){
+        
+        let newCartItem = CartItem(context: CartPersistenceController.shared.viewContext)
+        newCartItem.id = UUID()
+        newCartItem.count = 1
+        newCartItem.name = item.name
+        newCartItem.descr = item.description
+        newCartItem.category = item.category
+        newCartItem.price = item.price
+        newCartItem.id_item = Int32(item.id)
+        newCartItem.bio = item.bio
+        newCartItem.is_in_cart = item.isInCart
+        newCartItem.prep = item.preparation
+        newCartItem.time = item.time_result
+        
+        save()
+    }
+    
+    func save(){
+        do{
+            try CartPersistenceController.shared.viewContext.save()
+        }
+        catch{
+            print("Сохранение не удалось")
+        }
+    }
+    
+    func delete(id: Int){
+        
+        if let elementId = findElementInStorage(id: id){
+            CartPersistenceController.shared.viewContext.delete(elementId)
+            save()
+        }
+        else{
+            print("Элемент не найден")
+        }
+    }
+    
+    func findElementInStorage(id: Int) -> CartItem?{
+        
+        let request: NSFetchRequest<CartItem> = CartItem.fetchRequest()
+        request.predicate = NSPredicate(format: "id_item = '\(Int32(id))'")
+        
+        var items: [CartItem] = []
+        
+        do{
+            try items = CartPersistenceController.shared.viewContext.fetch(request)
+            return items[0]
+        }
+        catch{
+            print("(")
+            return nil
+        }
+        
     }
 }

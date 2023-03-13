@@ -21,7 +21,8 @@ struct AnCartParentView: View {
             
         case "cart":
             CartView(anCartVM: anCartVM)
-            
+        case "preloader":
+            PreloaderView()
             
         default:
             AnView(anCartVM: anCartVM)

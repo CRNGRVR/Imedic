@@ -56,7 +56,7 @@ struct CartView: View {
                 }
             }
             
-            Button(action: {}, label: {
+            Button(action: {anCartVM.goToOrder()}, label: {
                 ZStack{
                     Color("active")
                         .frame(width: 335, height: 56)

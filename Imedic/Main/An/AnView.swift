@@ -97,7 +97,11 @@ struct AnView: View {
             }
             
             
-            
+//            ForEach(anCartVM.storeCart){item in
+//                VStack{
+//                    Text(item.name ?? "Ошибка")
+//                }
+//            }
             
             if anCartVM.isShow{
                 
