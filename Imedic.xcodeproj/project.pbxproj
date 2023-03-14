@@ -10,6 +10,8 @@
 		2C089DDA29B49182005A2CCE /* SupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C089DD929B49182005A2CCE /* SupView.swift */; };
 		2C089DDE29B49201005A2CCE /* ResView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C089DDD29B49201005A2CCE /* ResView.swift */; };
 		2C089DE029B494F3005A2CCE /* UserVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C089DDF29B494F3005A2CCE /* UserVM.swift */; };
+		2C13F32C29BF538800867A49 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C13F32B29BF538800867A49 /* OrderView.swift */; };
+		2C13F32E29BF77B100867A49 /* OrderVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C13F32D29BF77B100867A49 /* OrderVM.swift */; };
 		2C2D32AA29BDD1740091D1C4 /* PreloaderVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D32A929BDD1740091D1C4 /* PreloaderVM.swift */; };
 		2C2D32AD29BDD18C0091D1C4 /* PreloaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D32AC29BDD18C0091D1C4 /* PreloaderView.swift */; };
 		2C30F60229A9052C001F322C /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30F60129A9052C001F322C /* CreatePasswordView.swift */; };
@@ -49,6 +51,8 @@
 		2C089DD929B49182005A2CCE /* SupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupView.swift; sourceTree = "<group>"; };
 		2C089DDD29B49201005A2CCE /* ResView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResView.swift; sourceTree = "<group>"; };
 		2C089DDF29B494F3005A2CCE /* UserVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVM.swift; sourceTree = "<group>"; };
+		2C13F32B29BF538800867A49 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		2C13F32D29BF77B100867A49 /* OrderVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderVM.swift; sourceTree = "<group>"; };
 		2C2D32A929BDD1740091D1C4 /* PreloaderVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreloaderVM.swift; sourceTree = "<group>"; };
 		2C2D32AC29BDD18C0091D1C4 /* PreloaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreloaderView.swift; sourceTree = "<group>"; };
 		2C30F60129A9052C001F322C /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
@@ -96,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C13F32A29BF537500867A49 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				2C13F32B29BF538800867A49 /* OrderView.swift */,
+				2C13F32D29BF77B100867A49 /* OrderVM.swift */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
 		2C2D32AB29BDD17A0091D1C4 /* Preloader */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +275,7 @@
 		2CFF15F829AC94E400F90A3D /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				2C13F32A29BF537500867A49 /* Order */,
 				2C2D32AB29BDD17A0091D1C4 /* Preloader */,
 				2C4CD4E529B222A00085F560 /* Cart */,
 				2CB3437729ACD85E008A8716 /* Common */,
@@ -353,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CFF374829ABBB7500981131 /* CreatePatientVM.swift in Sources */,
+				2C13F32C29BF538800867A49 /* OrderView.swift in Sources */,
 				2C904D0229A677330061304B /* Onboarding.swift in Sources */,
 				2CFF374629AB400700981131 /* CheckingEmailVM.swift in Sources */,
 				2C30F60729A92E0D001F322C /* CreatePatientView.swift in Sources */,
@@ -361,6 +376,7 @@
 				2C4CD4E729B222B90085F560 /* CartView.swift in Sources */,
 				2CE9EFCC29B9F7CD0066C3EA /* CartDataModel.xcdatamodeld in Sources */,
 				2C740F8D29A7D31500F12781 /* CheckingEmailView.swift in Sources */,
+				2C13F32E29BF77B100867A49 /* OrderVM.swift in Sources */,
 				2C2D32AD29BDD18C0091D1C4 /* PreloaderView.swift in Sources */,
 				2C30F60429A90538001F322C /* CreatePasswordVM.swift in Sources */,
 				2CFF15FE29AC951800F90A3D /* AnModel.swift in Sources */,

@@ -7,7 +7,6 @@
 
 import Foundation
 import Alamofire
-import SwiftUI
 import CoreData
 
 class AnCartVM: ObservableObject{
@@ -317,11 +316,6 @@ class AnCartVM: ObservableObject{
         isShowDescriptionCard = false
         
         addItemInCartStorage(item: catalogItemArr[selectedItemIndex])
-        //print(getCartFromStorage()[0].name)
-        
-//        for item in getCartFromStorage(){
-//            print(item.name)
-//        }
     }
     
     //  Удаление из корзины
@@ -476,6 +470,7 @@ class AnCartVM: ObservableObject{
     
     
     
+    
     func getCartFromStorage() -> [CartItem]{
         
         let request: NSFetchRequest<CartItem> = CartItem.fetchRequest()
@@ -491,7 +486,7 @@ class AnCartVM: ObservableObject{
     
     
     func fillStoredDataAtStart(){
-        var dataFromStorage = getCartFromStorage()
+        let dataFromStorage = getCartFromStorage()
         
         if !dataFromStorage.isEmpty{
             for i in 0...catalogItemArr.count - 1{
