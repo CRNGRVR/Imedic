@@ -135,7 +135,6 @@ struct tfWithSize: View{
     
     var body: some View{
         
-        
         ZStack{
             RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 1)
                 .background(Color("tf"))

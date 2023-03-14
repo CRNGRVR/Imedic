@@ -157,7 +157,6 @@ class AnCartVM: ObservableObject{
                 categories.append(Category(id: categories.count, name: category.category))
             }
         }
-        
     }
     
     //  Действие по нажатию на категорию
@@ -575,3 +574,6 @@ class AnCartVM: ObservableObject{
         }
     }
 }
+
+
+//bhigtytyfkuyglihuhgyfitufkuygi
