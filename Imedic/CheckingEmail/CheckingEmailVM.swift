@@ -63,8 +63,13 @@ class CheckingEmailVM: ObservableObject{
                 
                 if responce.value != nil{
                     self.nav.token = responce.value!.token
+                    
+                    KeyChainManager.shared.saveToken(token: responce.value!.token)
+                    
                     self.stop = true
                     self.next()
+                    
+                    print(KeyChainManager.shared.retreiveToken())
                 }
                 else{
                     self.isErr = true
@@ -78,7 +83,14 @@ class CheckingEmailVM: ObservableObject{
     }
     
     func next(){
-        if nav.isPasswordEntered{
+//        if nav.isPasswordEntered{
+//            nav.currentScreen = "create_patient"
+//        }
+//        else{
+//            nav.currentScreen = "create_password"
+//        }
+        
+        if KeyChainManager.shared.isHavedPassword(){
             nav.currentScreen = "create_patient"
         }
         else{

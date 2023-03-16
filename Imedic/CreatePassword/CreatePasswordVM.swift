@@ -45,8 +45,77 @@ class CreatePasswordVM: ObservableObject{
     }
     
     func save(){
-        UserDefaults.standard.set(password, forKey: "password")
+        
+        KeyChainManager.shared.savePassword(pass: password)
+        
+        
+    //UserDefaults.standard.set(password, forKey: "password")
+        
+//  Удаление данных по ключу genericPassword
+//  Для отладки
+//
+//        let query = [kSecClass: kSecClassGenericPassword] as CFDictionary
+//        let res = SecItemDelete(query)
+        
+        
+//  Добавление записи
+//  Адаптация
+//
+//        let kchSaveQuerry = [kSecClass: kSecClassGenericPassword, kSecValueData: password.data(using: .utf8)!] as CFDictionary
+//        print(SecItemAdd(kchSaveQuerry, nil))
+//
+//        //  Поиск записи
+//        let kchSearchQuerry = [kSecClass: kSecClassGenericPassword, kSecReturnAttributes: true, kSecReturnData: true] as CFDictionary
+//        var resp: AnyObject?
+//
+//        print(SecItemCopyMatching(kchSearchQuerry, &resp))
+//        if let result = resp as? NSDictionary, let pass = result[kSecValueData] as? Data{
+//            print(String(decoding: pass, as: UTF8.self))
+//        }
+//        else{
+//            print("no")
+//        }
+        
+        
+//Удаление
+//        let query = [
+//             kSecClass: kSecClassCertificate,
+//             kSecValueData: password.data(using: .utf8)!
+//        ] as CFDictionary
+//
+//        let res = SecItemDelete(query)
+//
+//
+//
+//Добавление
+//        let keychainAddQuery = [kSecValueData: password.data(using: .utf8)!, kSecClass: kSecClassCertificate] as CFDictionary
+//
+//        let status = SecItemAdd(keychainAddQuery, nil)
+//        print("Operation finished with status: \(status)")
+//
+//
+//
+//Поиск
+//       let keychainSearchItem = [
+//             //kSecValueData: "0011".data(using: .utf8)!,
+//             kSecClass: kSecClassCertificate,
+//             kSecReturnAttributes: true,
+//             kSecReturnData: true
+//         ] as CFDictionary
+//
+//         var ref: AnyObject?
+//
+//         let status1 = SecItemCopyMatching(keychainSearchItem, &ref)
+//         if let result = ref as? NSDictionary, let passwordData = result[kSecValueData] as? Data {
+//             print("Operation finished with status: \(status1)")
+//             print(result)
+//             let str = String(decoding: passwordData, as: UTF8.self)
+//             print(str)
+//         }else{
+//             print("Нет данных")
+//         }
     }
+    
     
     func next(){
         nav.currentScreen = "create_patient"
