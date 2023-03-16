@@ -83,8 +83,10 @@ struct CartCard: View{
     
     var body: some View{
         ZStack{
-            Color("card")
-                .cornerRadius(10)
+            Color.white
+                .cornerRadius(20)
+                .shadow(color: Color("shadow"), radius: 10, x: 0, y: 0)
+                .frame(width: 335, height: 138)
                 
             
             VStack{
@@ -131,7 +133,7 @@ struct CartCard: View{
                 }
             }
         }
-        .frame(width: 335, height: 138)
+        .frame(width: 360, height: 150)
     }
 }
 

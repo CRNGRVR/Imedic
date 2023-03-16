@@ -16,17 +16,22 @@ struct CheckingEmailView: View {
     
     var body: some View {
         VStack{
-            Button(action: {checkingemailVM.backToEmail()}, label: {
-                ZStack{
-                    Color("tf")
-                    Image("back")
-                }
-            })
-            .frame(width: 32, height: 32)
-            .cornerRadius(10)
-            .padding(.trailing, 300)
-            .padding(.bottom, 132)
+            HStack{
+                Button(action: {checkingemailVM.backToEmail()}, label: {
+                    ZStack{
+                        Color("tf")
+                        Image("back")
+                    }
+                })
+                .frame(width: 32, height: 32)
+                .cornerRadius(10)
+                .padding(.leading, 20)
+                .padding(.top, 24)
+                
+                Spacer()
+            }
             
+            Spacer()
             
             Text("Введите код из E-mail")
                 .font(.system(size: 17, weight: .semibold))
@@ -41,8 +46,11 @@ struct CheckingEmailView: View {
                 .font(.system(size: 15))
                 .foregroundColor(Color.gray)
                 .multilineTextAlignment(.center)
+                .padding(.bottom, 250)
+            
+            
+            Spacer()
         }
-        .padding(.bottom, 400)
         .onAppear{
             checkingemailVM.sheduleTimer()
         }
@@ -51,4 +59,11 @@ struct CheckingEmailView: View {
         }
     }
     
+}
+
+
+struct prewiew1: PreviewProvider{
+    static var previews: some View{
+        CheckingEmailView(nav: NavVm())
+    }
 }

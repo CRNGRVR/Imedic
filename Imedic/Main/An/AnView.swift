@@ -16,34 +16,43 @@ struct AnView: View {
         ZStack{
             VStack{
                 tf(text: $anCartVM.find, placeHolder: "Искать анализы")
+                    //.frame(width: PercentageFromScreen.shared.w(85), height: PercentageFromScreen.shared.h(5))
                 
                 ScrollView(.vertical, showsIndicators: false){
                     VStack{
-                        Text("Акции и новости")
-                            .foregroundColor(Color.gray)
-                            .font(.system(size: 17, weight: .semibold))
-                            .padding(.trailing, 180)
+                        HStack{
+                            Text("Акции и новости")
+                                .foregroundColor(Color.gray)
+                                .font(.system(size: 17, weight: .semibold))
+                                .padding(.leading, 30)
+                            
+                            Spacer()
+                        }
                         
                         //  Блок новостей
                         ScrollView(.horizontal, showsIndicators: false){
                             if anCartVM.isNewsLoaded{
                                 HStack(spacing: 16){
                                     ForEach(anCartVM.newsArr){news in
-                                        NewsBlock(title: news.name, descript: news.description, price: news.price, imageURL: news.image)
+                                        NewsBlock(anCartVM: anCartVM, id: news.id, title: news.name, descript: news.description, price: news.price, imageURL: news.image)
                                     }
                                 }
                                 .padding(.leading, 30)
                             }
                         }
                         
-                        Text("Каталог анализов")
-                            .foregroundColor(Color.gray)
-                            .font(.system(size: 17, weight: .semibold))
-                            .padding(.trailing, 180)
+                        HStack{
+                            Text("Каталог анализов")
+                                .foregroundColor(Color.gray)
+                                .font(.system(size: 17, weight: .semibold))
+                                .padding(.leading, 30)
+                            
+                            Spacer()
+                        }
                         
                         //  Фильтры по категориям
                         ScrollView(.horizontal, showsIndicators: false){
-                            HStack(spacing: 16){
+                            HStack(spacing: 8){
                                 ForEach(anCartVM.categories){category in
                                     Button(action: {anCartVM.categoryClick(current: category.id)}, label: {
                                         
@@ -103,13 +112,15 @@ struct AnView: View {
                     Color.black
                         .opacity(0.8)
                         .ignoresSafeArea(.all)
-                        .padding(.bottom, 300)
+                        .frame(width: PercentageFromScreen.shared.w(100), height: PercentageFromScreen.shared.h(100))
                     
                     ItemSheet(anVM: anCartVM)
-                    .padding(.top, 235)
+                        //.padding(.top, PercentageFromScreen.shared.h(20))
                 }
             }
         }
+        //  5 процентов
+        .padding(.top, PercentageFromScreen.shared.h(5))
         .onAppear{
             anCartVM.getAll()
         }
@@ -119,6 +130,9 @@ struct AnView: View {
 
 struct NewsBlock: View{
     
+    var anCartVM: AnCartVM
+    
+    var id: Int
     var title: String
     var descript: String
     var price: String
@@ -126,13 +140,14 @@ struct NewsBlock: View{
     
     var body: some View{
         ZStack{
-            Color("news")
+            
+            LinearGradient(gradient: Gradient(colors: anCartVM.newsBackground(id: id) ? [Color("gr1"), Color("gr2")] : [Color("gr11"), Color("gr12")]), startPoint: .leading, endPoint: .trailing)
                 .frame(width: 270, height: 152)
                 .cornerRadius(12)
             
            WebImage(url: URL(string: imageURL))
                 .resizable()
-                .frame(width: 170, height: 140)
+                .frame(maxWidth: 170, maxHeight: 140)
                 .padding(.leading, 100)
                 .padding(.top, 10)
             
@@ -171,16 +186,24 @@ struct CatalogBlock: View{
     var body: some View{
         
         ZStack{
-            Color("tf")
-                .frame(width: 335, height: 136)
+            Color.white
+                .frame(width: PercentageFromScreen.shared.w(85), height: PercentageFromScreen.shared.h(17))
                 .cornerRadius(10)
+                .shadow(color: Color("shadow"), radius: 10, x: 0, y: 0)
             
             VStack{
-                Text(title)
-                    .frame(width: 250, height: 50, alignment: .leading)
-                    .frame(width: 303)
-                    .font(.system(size: 16))
-                    .padding(.trailing, 50)
+                HStack{
+                    Text(title)
+                        .frame(width: 250, height: 50, alignment: .leading)
+                        .font(.system(size: 16))
+                        .padding(.leading, 16)
+                        
+                    
+                    Spacer()
+                }
+                .padding(.top, 16)
+
+                Spacer()
                 
                 HStack{
                     VStack{
@@ -194,8 +217,9 @@ struct CatalogBlock: View{
                             .frame(width: 120, alignment: .leading)
                             
                     }
-                    .padding(.trailing, 80)
+                    .padding(.leading, 16)
                     
+                    Spacer()
                     
                     Button(action: {
                         anVM.catalogItemButtonClick(id: id)
@@ -222,10 +246,15 @@ struct CatalogBlock: View{
                             }
                         }
                     })
+                    .padding(.trailing, 16)
+                    .padding(.bottom, 16)
+                    
                 }
             }
+            .frame(width: PercentageFromScreen.shared.w(85), height: PercentageFromScreen.shared.h(17))
             
         }
+        .frame(width: PercentageFromScreen.shared.w(90), height: PercentageFromScreen.shared.h(20))
         .onTapGesture {
             anVM.catalogItemFreeClick(id: id)
         }

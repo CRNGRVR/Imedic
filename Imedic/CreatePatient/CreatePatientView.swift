@@ -19,30 +19,48 @@ struct CreatePatientView: View {
         
         VStack{
             HStack{
+                
                 Text("Создание карты \nпациента")
                     .font(.system(size: 24, weight: .bold))
-                    .padding(.trailing, 55)
+                    .padding(.leading, 20)
+                    .frame(minHeight: 60, alignment: .topLeading)
+                
+                Spacer()
                 
                 Button(action: {createPatientVm.skip()}, label: {
                     Text("Пропустить")
                         .font(.system(size: 15))
                 })
+                .padding(.trailing, 20)
             }
-            .padding(.bottom, 16)
+            .padding(.top, 40)
+            //.padding(.bottom, 16)
             
-            Text("Без карты пациента вы не сможете заказать\nанализы.")
-                .font(.system(size: 14))
-                .foregroundColor(Color.gray)
-                .padding(.bottom, 8)
-                .padding(.trailing, 30)
+            HStack{
+                Text("Без карты пациента вы не сможете заказать\nанализы.")
+                    .font(.system(size: 14))
+                    .foregroundColor(Color.gray)
+                    //.padding(.bottom, 8)
+                    .padding(.leading, 20)
                 
-
+                Spacer()
+            }
             
-            Text("В картах пациентов будут храниться результаты анализов вас и ваших близких.")
-                .font(.system(size: 14))
-                .foregroundColor(Color.gray)
-                .padding(.bottom, 32)
-                .lineSpacing(2)
+            Spacer()
+                .frame(maxHeight: 8)
+            
+            HStack{
+                Text("В картах пациентов будут храниться результаты анализов вас и ваших близких.")
+                    .font(.system(size: 14))
+                    .foregroundColor(Color.gray)
+                    .lineSpacing(2)
+                    .padding(.leading, 20)
+                
+                Spacer()
+            }
+            
+            Spacer()
+                .frame(maxHeight: 32)
             
             VStack(spacing: 24){
                 tf(text: $createPatientVm.name, placeHolder: "Имя")
@@ -51,7 +69,9 @@ struct CreatePatientView: View {
                 tf(text: $createPatientVm.date, placeHolder: "Дата рождения")
                 tf(text: $createPatientVm.pol, placeHolder: "Пол")
             }
-            .padding(.bottom, 48)
+           
+            Spacer()
+                //.frame(minHeight: 24)
             
             Button(action: {createPatientVm.clickSend()}, label: {
                 ZStack{
@@ -66,7 +86,15 @@ struct CreatePatientView: View {
             .frame(width: 335, height: 56)
             .cornerRadius(10)
             
+            Spacer()
+                //.frame(minHeight: 30)
+            
         }
     }
 }
 
+struct prewiew2: PreviewProvider{
+    static var previews: some View{
+        CreatePatientView(nav: NavVm())
+    }
+}

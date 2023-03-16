@@ -103,8 +103,27 @@ class AnCartVM: ObservableObject{
                 
                 if responce.value != nil{
                     self.newsArr = responce.value!
+                    self.fixImage()
                 }
             }
+    }
+    
+    func fixImage(){
+        
+        for index in 0...newsArr.count - 1{
+            newsArr[index].image = fixPath(rawPath: newsArr[index].image)
+        }
+    }
+    
+    
+    func newsBackground(id: Int) -> Bool{
+        
+        if id % 2 == 0{
+            return true
+        }
+        else{
+            return false
+        }
     }
     
     func getCatalog(){
@@ -572,6 +591,24 @@ class AnCartVM: ObservableObject{
         catch{
             print("(")
         }
+    }
+    
+    
+    
+    func fixPath(rawPath: String) -> String{
+        
+        var fixedPath = ""
+        
+        for char in rawPath{
+            if char != " "{
+                fixedPath.append(char)
+            }
+            else{
+                fixedPath.append("%20")
+            }
+        }
+        
+        return fixedPath
     }
 }
 

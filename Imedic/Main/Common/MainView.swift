@@ -17,32 +17,36 @@ struct MainView: View {
     var body: some View {
         ZStack{
             
-            //Color.blue
-            
             VStack(spacing: 0){
-                switch mainVM.internalNav{
-                case "an":
-                    AnCartParentView(nav: mainVM.nav)
-                case "user":
-                    UserView()
-                case "sup":
-                    SupView()
-                        .frame(height: 670)
-                case "res":
-                    ResView()
-                        .frame(height: 670)
-                    
-                default: Color.white
-                        .padding(.top, 40)
+                VStack{
+                    switch mainVM.internalNav{
+                    case "an":
+                        AnCartParentView(nav: mainVM.nav)
+                    case "user":
+                        UserView()
+                    case "sup":
+                        SupView()
+                            
+                    case "res":
+                        ResView()
+                            .frame(height: 670)
+                        
+                    default: Color.white
+                            .padding(.top, 40)
+                    }
                 }
+                .frame(height: UIScreen.main.bounds.size.height - 100)
+                
+            
                     
                 //  Таббар
+                //  Ну типо
                 ZStack{
                     Color.white
-                        .frame(width: 390, height: 60)
-                    
+                        .frame(width: UIScreen.main.bounds.width, height: 100)
+
                     HStack(spacing: 27){
-                        
+
                         Button(action: {mainVM.an()}, label: {
                             VStack{
                                 Image(mainVM.isActiveTabs[0] ? "a-an" : "non-an")
@@ -76,10 +80,11 @@ struct MainView: View {
                             }
                         })
                     }
-                    .padding(.top, 20)
+                    .padding(.bottom, 20
+                    )
                 }
                 .ignoresSafeArea(.all)
-                //.padding(.top, 745)
+                
             }
         }
     }

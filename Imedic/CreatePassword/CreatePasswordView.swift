@@ -17,12 +17,19 @@ struct CreatePasswordView: View {
     var body: some View {
         
         VStack{
-            Button(action: {createPasswordVM.skip()}, label: {
-                Text("Пропустить")
-                    .font(.system(size: 15))
-            })
-            .padding(.bottom, 40)
-            .padding(.leading, 250)
+            HStack{
+                
+                Spacer()
+                
+                Button(action: {createPasswordVM.skip()}, label: {
+                    Text("Пропустить")
+                        .font(.system(size: 15))
+                })
+                .padding(.trailing, 20)
+                
+            }
+            
+            Spacer()
             
             Text("Создайте пароль")
                 .font(.system(size: 24, weight: .bold))
@@ -31,12 +38,16 @@ struct CreatePasswordView: View {
             Text("Для защиты ваших персональных данных")
                 .font(.system(size: 15))
                 .foregroundColor(Color.gray)
-                .padding(.bottom, 56)
+                
+            Spacer()
+            
             
             passPoints(points: createPasswordVM.pass_points)
                 .padding(.bottom, 60)
             
             keyboard(vm: createPasswordVM)
+            
+            Spacer()
         }
     }
 }
@@ -114,5 +125,12 @@ struct keyboard: View{
                 .padding(.leading, 20)
             }
         }
+    }
+}
+
+struct prewiew3: PreviewProvider{
+    
+    static var previews: some View{
+        CreatePasswordView(nav: NavVm())
     }
 }

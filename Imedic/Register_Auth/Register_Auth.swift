@@ -57,8 +57,9 @@ struct Register_Auth: View {
             })
             .frame(width: 335, height: 56)
             .cornerRadius(10)
-            .padding(.bottom, 230)
-            
+            //.padding(.bottom, 230)
+            Spacer()
+                .frame(maxHeight: 400)
             
             Text("Или войдите с помощью")
                 .foregroundColor(Color.gray)
@@ -79,6 +80,7 @@ struct Register_Auth: View {
             })
             .frame(width: 335, height: 60)
             .cornerRadius(10)
+            .padding(.bottom, 56)
             
             
             
@@ -88,5 +90,12 @@ struct Register_Auth: View {
         }
         
         
+    }
+}
+
+struct prewiew: PreviewProvider{
+    
+    static var previews: some View{
+        Register_Auth(nav: NavVm())
     }
 }

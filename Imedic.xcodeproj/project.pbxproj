@@ -10,6 +10,7 @@
 		2C089DE029B494F3005A2CCE /* UserVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C089DDF29B494F3005A2CCE /* UserVM.swift */; };
 		2C13F32C29BF538800867A49 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C13F32B29BF538800867A49 /* OrderView.swift */; };
 		2C13F32E29BF77B100867A49 /* OrderVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C13F32D29BF77B100867A49 /* OrderVM.swift */; };
+		2C209F1129C1B2AF008BEE58 /* PercentageFromScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C209F1029C1B2AF008BEE58 /* PercentageFromScreen.swift */; };
 		2C2D32AA29BDD1740091D1C4 /* PreloaderVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D32A929BDD1740091D1C4 /* PreloaderVM.swift */; };
 		2C2D32AD29BDD18C0091D1C4 /* PreloaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D32AC29BDD18C0091D1C4 /* PreloaderView.swift */; };
 		2C30F60229A9052C001F322C /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30F60129A9052C001F322C /* CreatePasswordView.swift */; };
@@ -51,6 +52,7 @@
 		2C089DDF29B494F3005A2CCE /* UserVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVM.swift; sourceTree = "<group>"; };
 		2C13F32B29BF538800867A49 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		2C13F32D29BF77B100867A49 /* OrderVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderVM.swift; sourceTree = "<group>"; };
+		2C209F1029C1B2AF008BEE58 /* PercentageFromScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentageFromScreen.swift; sourceTree = "<group>"; };
 		2C2D32A929BDD1740091D1C4 /* PreloaderVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreloaderVM.swift; sourceTree = "<group>"; };
 		2C2D32AC29BDD18C0091D1C4 /* PreloaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreloaderView.swift; sourceTree = "<group>"; };
 		2C30F60129A9052C001F322C /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				2C904D0729A681270061304B /* NavVM.swift */,
 				2C30F60829A92EB5001F322C /* tf.swift */,
 				2CB571E829A6507700278688 /* ImedicApp.swift */,
+				2C209F1029C1B2AF008BEE58 /* PercentageFromScreen.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				2CFF374F29ABC83700981131 /* CheckingEmailModel.swift in Sources */,
 				2CB3437D29ACE403008A8716 /* UserView.swift in Sources */,
 				2CB571EB29A6507700278688 /* ParentView.swift in Sources */,
+				2C209F1129C1B2AF008BEE58 /* PercentageFromScreen.swift in Sources */,
 				2C904D0F29A696750061304B /* Register_Auth_VM.swift in Sources */,
 				2C089DE029B494F3005A2CCE /* UserVM.swift in Sources */,
 				2CFF15FA29AC94F800F90A3D /* MainView.swift in Sources */,
