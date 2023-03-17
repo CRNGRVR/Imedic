@@ -13,7 +13,12 @@ final class TestOnboarding: XCTestCase {
 
     var onb = OnboardingTDDVM(nav: NavVm())
 
-    func testBtnText() throws {
+    func testSomeItemsInQueue(){
+        
+        XCTAssertEqual(onb.buttonText, "Продолжить")
+    }
+    
+    func testBtnText(){
         onb.nextBoard()
         onb.nextBoard()
         
