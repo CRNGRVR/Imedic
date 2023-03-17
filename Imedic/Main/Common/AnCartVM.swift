@@ -63,7 +63,7 @@ class AnCartVM: ObservableObject{
     
     
     //  Отфильтрованый каталог
-    //  В новой концепции используется только для
+    //  Используется только для
     //  отображения в фильтрованом представлении
     @Published var filtredCatalogArr: [CatalogItem]  = []
     
@@ -142,7 +142,7 @@ class AnCartVM: ObservableObject{
     }
     
     
-    //  Заполнение сновного массива данными из массива, пришедшего из api
+    //  Заполнение основного массива данными из массива, пришедшего из api
     func fillCatalogItems(){
         
         for item in catalogArr{
@@ -611,6 +611,3 @@ class AnCartVM: ObservableObject{
         return fixedPath
     }
 }
-
-
-//bhigtytyfkuyglihuhgyfitufkuygi

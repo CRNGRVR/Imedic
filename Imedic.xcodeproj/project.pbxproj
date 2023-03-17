@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C00A6A929C346D600B978E5 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2C00A6A829C346D600B978E5 /* SDWebImageSwiftUI */; };
+		2C00A6AC29C36D7200B978E5 /* OnboardingTDD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C00A6AB29C36D7200B978E5 /* OnboardingTDD.swift */; };
+		2C00A6AE29C36D9E00B978E5 /* OnboadingTDDVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C00A6AD29C36D9E00B978E5 /* OnboadingTDDVM.swift */; };
+		2C00A6B029C37D0D00B978E5 /* OnboardingTDDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C00A6AF29C37D0D00B978E5 /* OnboardingTDDModel.swift */; };
 		2C089DE029B494F3005A2CCE /* UserVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C089DDF29B494F3005A2CCE /* UserVM.swift */; };
 		2C13F32C29BF538800867A49 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C13F32B29BF538800867A49 /* OrderView.swift */; };
 		2C13F32E29BF77B100867A49 /* OrderVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C13F32D29BF77B100867A49 /* OrderVM.swift */; };
 		2C209F1129C1B2AF008BEE58 /* PercentageFromScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C209F1029C1B2AF008BEE58 /* PercentageFromScreen.swift */; };
 		2C209F1329C3124E008BEE58 /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C209F1229C3124E008BEE58 /* KeyChainManager.swift */; };
+		2C209F3329C34377008BEE58 /* TestOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C209F3229C34377008BEE58 /* TestOnboarding.swift */; };
 		2C2D32AA29BDD1740091D1C4 /* PreloaderVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D32A929BDD1740091D1C4 /* PreloaderVM.swift */; };
 		2C2D32AD29BDD18C0091D1C4 /* PreloaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D32AC29BDD18C0091D1C4 /* PreloaderView.swift */; };
 		2C30F60229A9052C001F322C /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30F60129A9052C001F322C /* CreatePasswordView.swift */; };
@@ -49,12 +54,27 @@
 		2CFF374F29ABC83700981131 /* CheckingEmailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF374E29ABC83700981131 /* CheckingEmailModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2C209F3429C34377008BEE58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CB571DD29A6507600278688 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CB571E429A6507600278688;
+			remoteInfo = Imedic;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		2C00A6AB29C36D7200B978E5 /* OnboardingTDD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTDD.swift; sourceTree = "<group>"; };
+		2C00A6AD29C36D9E00B978E5 /* OnboadingTDDVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboadingTDDVM.swift; sourceTree = "<group>"; };
+		2C00A6AF29C37D0D00B978E5 /* OnboardingTDDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTDDModel.swift; sourceTree = "<group>"; };
 		2C089DDF29B494F3005A2CCE /* UserVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVM.swift; sourceTree = "<group>"; };
 		2C13F32B29BF538800867A49 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		2C13F32D29BF77B100867A49 /* OrderVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderVM.swift; sourceTree = "<group>"; };
 		2C209F1029C1B2AF008BEE58 /* PercentageFromScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentageFromScreen.swift; sourceTree = "<group>"; };
 		2C209F1229C3124E008BEE58 /* KeyChainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainManager.swift; sourceTree = "<group>"; };
+		2C209F3029C34377008BEE58 /* TestOnboarding.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestOnboarding.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C209F3229C34377008BEE58 /* TestOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestOnboarding.swift; sourceTree = "<group>"; };
 		2C2D32A929BDD1740091D1C4 /* PreloaderVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreloaderVM.swift; sourceTree = "<group>"; };
 		2C2D32AC29BDD18C0091D1C4 /* PreloaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreloaderView.swift; sourceTree = "<group>"; };
 		2C30F60129A9052C001F322C /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
@@ -92,6 +112,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2C209F2D29C34377008BEE58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C00A6A929C346D600B978E5 /* SDWebImageSwiftUI in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2CB571E229A6507600278688 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -104,6 +132,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C00A6A729C346D600B978E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2C00A6AA29C36D5400B978E5 /* OnboardingTDD */ = {
+			isa = PBXGroup;
+			children = (
+				2C00A6AB29C36D7200B978E5 /* OnboardingTDD.swift */,
+				2C00A6AD29C36D9E00B978E5 /* OnboadingTDDVM.swift */,
+				2C00A6AF29C37D0D00B978E5 /* OnboardingTDDModel.swift */,
+			);
+			path = OnboardingTDD;
+			sourceTree = "<group>";
+		};
 		2C13F32A29BF537500867A49 /* Order */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +156,14 @@
 				2C13F32D29BF77B100867A49 /* OrderVM.swift */,
 			);
 			path = Order;
+			sourceTree = "<group>";
+		};
+		2C209F3129C34377008BEE58 /* TestOnboarding */ = {
+			isa = PBXGroup;
+			children = (
+				2C209F3229C34377008BEE58 /* TestOnboarding.swift */,
+			);
+			path = TestOnboarding;
 			sourceTree = "<group>";
 		};
 		2C2D32AB29BDD17A0091D1C4 /* Preloader */ = {
@@ -242,7 +295,9 @@
 			isa = PBXGroup;
 			children = (
 				2CB571E729A6507700278688 /* Imedic */,
+				2C209F3129C34377008BEE58 /* TestOnboarding */,
 				2CB571E629A6507700278688 /* Products */,
+				2C00A6A729C346D600B978E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -250,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				2CB571E529A6507700278688 /* Imedic.app */,
+				2C209F3029C34377008BEE58 /* TestOnboarding.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -281,6 +337,7 @@
 		2CFF15F829AC94E400F90A3D /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				2C00A6AA29C36D5400B978E5 /* OnboardingTDD */,
 				2C13F32A29BF537500867A49 /* Order */,
 				2C2D32AB29BDD17A0091D1C4 /* Preloader */,
 				2C4CD4E529B222A00085F560 /* Cart */,
@@ -296,6 +353,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2C209F2F29C34377008BEE58 /* TestOnboarding */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C209F3629C34377008BEE58 /* Build configuration list for PBXNativeTarget "TestOnboarding" */;
+			buildPhases = (
+				2C209F2C29C34377008BEE58 /* Sources */,
+				2C209F2D29C34377008BEE58 /* Frameworks */,
+				2C209F2E29C34377008BEE58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C209F3529C34377008BEE58 /* PBXTargetDependency */,
+			);
+			name = TestOnboarding;
+			packageProductDependencies = (
+				2C00A6A829C346D600B978E5 /* SDWebImageSwiftUI */,
+			);
+			productName = TestOnboarding;
+			productReference = 2C209F3029C34377008BEE58 /* TestOnboarding.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		2CB571E429A6507600278688 /* Imedic */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CB571F329A6507900278688 /* Build configuration list for PBXNativeTarget "Imedic" */;
@@ -327,6 +405,10 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					2C209F2F29C34377008BEE58 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 2CB571E429A6507600278688;
+					};
 					2CB571E429A6507600278688 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -350,11 +432,19 @@
 			projectRoot = "";
 			targets = (
 				2CB571E429A6507600278688 /* Imedic */,
+				2C209F2F29C34377008BEE58 /* TestOnboarding */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2C209F2E29C34377008BEE58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2CB571E329A6507600278688 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -368,6 +458,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2C209F2C29C34377008BEE58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C209F3329C34377008BEE58 /* TestOnboarding.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2CB571E129A6507600278688 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -387,6 +485,7 @@
 				2C209F1329C3124E008BEE58 /* KeyChainManager.swift in Sources */,
 				2C30F60429A90538001F322C /* CreatePasswordVM.swift in Sources */,
 				2CFF15FE29AC951800F90A3D /* AnModel.swift in Sources */,
+				2C00A6B029C37D0D00B978E5 /* OnboardingTDDModel.swift in Sources */,
 				2C904D0829A681270061304B /* NavVM.swift in Sources */,
 				2C562FA729BDB6CC0047774F /* CartPersistenceController.swift in Sources */,
 				2CE9DE9229C0AF2800D97105 /* ResView.swift in Sources */,
@@ -397,6 +496,7 @@
 				2C209F1129C1B2AF008BEE58 /* PercentageFromScreen.swift in Sources */,
 				2C904D0F29A696750061304B /* Register_Auth_VM.swift in Sources */,
 				2C089DE029B494F3005A2CCE /* UserVM.swift in Sources */,
+				2C00A6AE29C36D9E00B978E5 /* OnboadingTDDVM.swift in Sources */,
 				2CFF15FA29AC94F800F90A3D /* MainView.swift in Sources */,
 				2CB3437929ACD89E008A8716 /* AnView.swift in Sources */,
 				2C30F60229A9052C001F322C /* CreatePasswordView.swift in Sources */,
@@ -405,6 +505,7 @@
 				2CB571E929A6507700278688 /* ImedicApp.swift in Sources */,
 				2CFF374D29ABC15100981131 /* Register_Auth_Model.swift in Sources */,
 				2C904D0629A67B320061304B /* OnboardingVM.swift in Sources */,
+				2C00A6AC29C36D7200B978E5 /* OnboardingTDD.swift in Sources */,
 				2C30F60929A92EB5001F322C /* tf.swift in Sources */,
 				2C4CD4E929B22C4C0085F560 /* AnCartParentView.swift in Sources */,
 			);
@@ -412,7 +513,57 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		2C209F3529C34377008BEE58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CB571E429A6507600278688 /* Imedic */;
+			targetProxy = 2C209F3429C34377008BEE58 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		2C209F3729C34377008BEE58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = a.TestOnboarding;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Imedic.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Imedic";
+			};
+			name = Debug;
+		};
+		2C209F3829C34377008BEE58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = a.TestOnboarding;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Imedic.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Imedic";
+			};
+			name = Release;
+		};
 		2CB571F129A6507900278688 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -592,6 +743,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2C209F3629C34377008BEE58 /* Build configuration list for PBXNativeTarget "TestOnboarding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C209F3729C34377008BEE58 /* Debug */,
+				2C209F3829C34377008BEE58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2CB571E029A6507600278688 /* Build configuration list for PBXProject "Imedic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -632,6 +792,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2C00A6A829C346D600B978E5 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2CB3437E29ACE69B008A8716 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
 		2CB3437F29ACE69B008A8716 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2CB3437E29ACE69B008A8716 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;

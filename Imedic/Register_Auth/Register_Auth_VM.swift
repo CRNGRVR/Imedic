@@ -96,6 +96,7 @@ class Reg_AuthVM: ObservableObject{
                         if responce.response?.statusCode == 200{
                             
                             self.nav.email = self.mail //Передача в другое представление
+                            KeyChainManager.shared.deleteToken()
                             self.nav.currentScreen = "checking_email"
                         }
                     }

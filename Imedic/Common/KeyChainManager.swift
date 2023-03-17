@@ -11,10 +11,6 @@ struct KeyChainManager{
     
     static let shared = KeyChainManager()
     
-    init(){
-        //deletePassword()
-    }
-    
     func savePassword(pass: String){
         let kchSaveQuerry = [kSecClass: kSecClassGenericPassword, kSecValueData: pass.data(using: .utf8)!] as CFDictionary
         SecItemAdd(kchSaveQuerry, nil)
@@ -23,7 +19,9 @@ struct KeyChainManager{
     func deletePassword(){
         let query = [kSecClass: kSecClassGenericPassword] as CFDictionary
         SecItemDelete(query)
-        
+    }
+    
+    func deleteToken(){
         let query1 = [kSecClass: kSecClassCertificate] as CFDictionary
         SecItemDelete(query1)
     }
