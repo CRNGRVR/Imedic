@@ -28,14 +28,18 @@ class OnboardingTDDVM: ObservableObject{
     
     func nextBoard(){
         
-        queue.remove(at: 0)
-        
-        if queue.count == 1{
-            buttonText = "Завершить"
+        if queue.count > 1{
+            
+            queue.remove(at: 0)
+            
+            if queue.count == 1{
+                buttonText = "Завершить"
+            }
         }
     }
     
     func next(){
-        
+        nav.currentScreen = "reg_auth"
+        UserDefaults.standard.set(true, forKey: "isLoadedYet")
     }
 }

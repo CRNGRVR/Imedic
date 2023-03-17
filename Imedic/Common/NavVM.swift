@@ -11,7 +11,6 @@ class NavVm: ObservableObject{
     
     //   Используется в ParentView для навигации между дочерними представлениями
     @Published var currentScreen: String
-    var isPasswordEntered: Bool
     
     init(){
         
@@ -23,17 +22,7 @@ class NavVm: ObservableObject{
         else{
             currentScreen = "reg_auth"
         }
-        //currentScreen = "onboarding"
-        
-        
-        
-        if(UserDefaults.standard.string(forKey: "password") != nil){
-            isPasswordEntered = true
-        }
-        else{
-            isPasswordEntered = false
-        }
-        
+//        currentScreen = "onboarding"
     }
     
     

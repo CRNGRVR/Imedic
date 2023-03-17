@@ -8,12 +8,21 @@
 import SwiftUI
 
 struct OnboardingTDD: View {
+    
+    @ObservedObject var onb: OnboardingTDDVM
+    
+    init(nav: NavVm){
+        onb = OnboardingTDDVM(nav: nav)
+    }
+    
     var body: some View {
         VStack{
             
             HStack{
-                Button(action: {}, label: {
-                    Text("Пропустить")
+                Button(action: {
+                    onb.next()
+                }, label: {
+                    Text(onb.buttonText)
                         .font(.system(size: 20))
                 })
                 .padding(.leading, 30)
@@ -25,14 +34,14 @@ struct OnboardingTDD: View {
             
             Spacer()
             
-            Text("Анализы")
+            Text(onb.queue[0].title)
                 .foregroundColor(Color.green)
                 .font(.system(size: 20, weight: .semibold))
             
             Spacer()
                 .frame(maxHeight: 20)
             
-            Text("Экспресс сбор и получение проб")
+            Text(onb.queue[0].descr)
                 .font(.system(size: 14))
                 .foregroundColor(Color.gray)
             
@@ -46,15 +55,21 @@ struct OnboardingTDD: View {
             
             Spacer()
             
-            Image("onboard1")
+            Image(onb.queue[0].image)
             
             Spacer()
         }
+        .gesture(DragGesture(minimumDistance: 50).onEnded{value in
+            
+            if value.translation.width < 0{
+                onb.nextBoard()
+            }
+        })
     }
 }
 
-struct OnboardingTDD_Previews: PreviewProvider {
-    static var previews: some View {
-        OnboardingTDD()
-    }
-}
+//struct OnboardingTDD_Previews: PreviewProvider {
+//    static var previews: some View {
+//        OnboardingTDD()
+//    }
+//}
