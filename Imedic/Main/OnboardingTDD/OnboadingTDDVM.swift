@@ -12,7 +12,7 @@ class OnboardingTDDVM: ObservableObject{
     @Published var nav: NavVm
     init(nav: NavVm){
         self.nav = nav
-        
+        fillQueue()
     }
     
     @Published var queue: [OnboardingItem] = []
@@ -28,6 +28,11 @@ class OnboardingTDDVM: ObservableObject{
     
     func nextBoard(){
         
+        queue.remove(at: 0)
+        
+        if queue.count == 1{
+            buttonText = "Завершить"
+        }
     }
     
     func next(){
