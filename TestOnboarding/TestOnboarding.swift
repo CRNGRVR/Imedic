@@ -22,17 +22,28 @@ final class TestOnboarding: XCTestCase {
     
     
     func testRetreivingFirst(){
-        let resultOfCompare = compareItems(onb.queue[0], OnboardingItem(title: "Анализы", descr: "Экспресс сбор и получение проб", image: "onboard1"))
+        
+        let resultOfCompare = compareItems(onb.queue.first, OnboardingItem(title: "Анализы", descr: "Экспресс сбор и получение проб", image: "onboard1"))
         XCTAssertTrue(resultOfCompare)
     }
+    
     
     func testRetreivingSecond(){
-        let resultOfCompare = compareItems(onb.queue[1], OnboardingItem(title: "Уведомления", descr: "Вы быстро узнаете о результатах", image: "onboard2"))
+    
+        onb.nextBoard()
+        
+        var resultOfCompare = compareItems(onb.queue.first, OnboardingItem(title: "Уведомления", descr: "Вы быстро узнаете о результатах", image: "onboard2"))
+        
         XCTAssertTrue(resultOfCompare)
     }
     
+    
     func testRetreivingThird(){
-        let resultOfCompare = compareItems(onb.queue[2], OnboardingItem(title: "Мониторинг", descr: "Наши врачи всегда наблюдают за вашими показателями здоровья", image: "onboard3"))
+        
+        onb.nextBoard()
+        onb.nextBoard()
+        
+        let resultOfCompare = compareItems(onb.queue.first, OnboardingItem(title: "Мониторинг", descr: "Наши врачи всегда наблюдают за вашими показателями здоровья", image: "onboard3"))
         XCTAssertTrue(resultOfCompare)
     }
     

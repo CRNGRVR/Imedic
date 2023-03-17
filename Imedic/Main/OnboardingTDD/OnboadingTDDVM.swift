@@ -15,7 +15,7 @@ class OnboardingTDDVM: ObservableObject{
         
     }
     
-    @Published var queue = [OnboardingItem?](repeating: nil, count: 3)
+    @Published var queue: [OnboardingItem] = []
     
     @Published var buttonText = "Продолжить"
     
