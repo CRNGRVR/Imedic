@@ -17,6 +17,7 @@ class AnCartVM: ObservableObject{
         self.nav = nav
     }
     
+    
     @Published var anCartNav = "list"
     
     //  Поле для поиска
@@ -482,7 +483,8 @@ class AnCartVM: ObservableObject{
     
     
     func goToOrder(){
-        anCartNav = "preloader"
+        //anCartNav = "preloader"
+        anCartNav = "order"
     }
     
     
@@ -610,4 +612,7 @@ class AnCartVM: ObservableObject{
         
         return fixedPath
     }
+    
+    
+    
 }

@@ -36,9 +36,11 @@ struct AnView: View {
                                     ForEach(anCartVM.newsArr){news in
                                         NewsBlock(anCartVM: anCartVM, id: news.id, title: news.name, descript: news.description, price: news.price, imageURL: news.image)
                                     }
+                                    
                                 }
                                 .padding(.leading, 30)
                             }
+                            
                         }
                         
                         HStack{
@@ -100,10 +102,13 @@ struct AnView: View {
                         }
                     })
                 }
+                
+                
             }
             .alert(isPresented: $anCartVM.isErr){
                 Alert(title: Text("Проблемы c cетью"))
             }
+            
             
             
             if anCartVM.isShowDescriptionCard{
@@ -113,16 +118,24 @@ struct AnView: View {
                         .opacity(0.8)
                         .ignoresSafeArea(.all)
                         .frame(width: PercentageFromScreen.shared.w(100), height: PercentageFromScreen.shared.h(100))
-                    
+
                     ItemSheet(anVM: anCartVM)
                         //.padding(.top, PercentageFromScreen.shared.h(20))
                 }
+
+
+                //Color.blue
+                //Text("Ну что это такое")
             }
+            
+            
+            
         }
         //  5 процентов
         .padding(.top, PercentageFromScreen.shared.h(5))
         .onAppear{
-            anCartVM.getAll()
+            print("View init")
+            //anCartVM.getAll()
         }
     }
 }
@@ -218,6 +231,7 @@ struct CatalogBlock: View{
                             
                     }
                     .padding(.leading, 16)
+                    .padding(.bottom, 16)
                     
                     Spacer()
                     
@@ -373,14 +387,14 @@ struct ItemSheet: View{
 
 
 
-
-struct AnView_Previews: PreviewProvider {
-    static var previews: some View {
-        //AnView(nav: NavVm())
-        //CatalogBlock(title: "Клинический анализ крови с лейкоцитарной формулировкой", duration: "7 рабочих дней", price: "1800")
-        
-        //NewsBlock(title: "Результаты ПЦР-теста на COVID-19 за 3 часа", descript: "Теперь результат ПЦР-теста на COVID-19 можно получить уже через 3 часа!", price: "1400", imageURL: "https://medic.madskill.ru/filemanager/uploads/pngwing.com (4).png")
-        
-        ItemSheet(anVM: AnCartVM(nav: NavVm()))
-    }
-}
+//
+//struct AnView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        //AnView(nav: NavVm())
+//        //CatalogBlock(title: "Клинический анализ крови с лейкоцитарной формулировкой", duration: "7 рабочих дней", price: "1800")
+//
+//        //NewsBlock(title: "Результаты ПЦР-теста на COVID-19 за 3 часа", descript: "Теперь результат ПЦР-теста на COVID-19 можно получить уже через 3 часа!", price: "1400", imageURL: "https://medic.madskill.ru/filemanager/uploads/pngwing.com (4).png")
+//
+//        //ItemSheet(anVM: AnCartVM(nav: NavVm()))
+//    }
+//}

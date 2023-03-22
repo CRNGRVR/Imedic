@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 class OrderVM: ObservableObject{
     
@@ -13,6 +14,22 @@ class OrderVM: ObservableObject{
     
     init(anVM: AnCartVM) {
         self.anVM = anVM
+    }
+    
+    @Published var lat = ""
+    @Published var lon = ""
+    
+    
+    let locationManager = CLLocationManager()
+    
+    
+    func request(){
+        locationManager.requestWhenInUseAuthorization()
+    }
+    
+    func getl(){
+        print(locationManager.location?.coordinate.latitude)
+        print(locationManager.location?.coordinate.longitude)
     }
     
 }

@@ -85,6 +85,7 @@
 		2C4CD4E829B22C4C0085F560 /* AnCartParentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnCartParentView.swift; sourceTree = "<group>"; };
 		2C562FA629BDB6CC0047774F /* CartPersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPersistenceController.swift; sourceTree = "<group>"; };
 		2C740F8C29A7D31500F12781 /* CheckingEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckingEmailView.swift; sourceTree = "<group>"; };
+		2C8563FE29CB439900C3724C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2C904D0129A677330061304B /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		2C904D0329A678E20061304B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		2C904D0529A67B320061304B /* OnboardingVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVM.swift; sourceTree = "<group>"; };
@@ -313,6 +314,7 @@
 		2CB571E729A6507700278688 /* Imedic */ = {
 			isa = PBXGroup;
 			children = (
+				2C8563FE29CB439900C3724C /* Info.plist */,
 				2CFF15F829AC94E400F90A3D /* Main */,
 				2C30F60529A92DEE001F322C /* CreatePatient */,
 				2C30F60029A90511001F322C /* CreatePassword */,
@@ -689,6 +691,9 @@
 				DEVELOPMENT_TEAM = N5Q5NU635P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Imedic/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "this gefnjwf kwefwegnjger ggeggege";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -720,6 +725,9 @@
 				DEVELOPMENT_TEAM = N5Q5NU635P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Imedic/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "this gefnjwf kwefwegnjger ggeggege";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

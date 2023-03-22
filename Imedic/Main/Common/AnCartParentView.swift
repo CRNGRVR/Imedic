@@ -23,13 +23,16 @@ struct AnCartParentView: View {
             CartView(anCartVM: anCartVM)
         case "preloader":
             PreloaderView()
+        
+        case "order":
+            OrderView(anCartVM: anCartVM)
             
         default:
             AnView(anCartVM: anCartVM)
         }
     }
-    
 }
+
 //struct AnCartParentView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        AnCartParentView()

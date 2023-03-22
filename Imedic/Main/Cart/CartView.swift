@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CartView: View {
     
-    @ObservedObject var anCartVM: AnCartVM = AnCartVM(nav: NavVm())
+    @ObservedObject var anCartVM: AnCartVM = AnCartVM(nav: NavVm(), mainVM: MainVM(nav: NavVm()))
     
     var body: some View {
         VStack{

@@ -10,9 +10,11 @@ import SwiftUI
 struct MainView: View {
     
     @ObservedObject var mainVM: MainVM
+    
     init(nav: NavVm){
         mainVM = MainVM(nav: nav)
     }
+    
     
     var body: some View {
         ZStack{
@@ -80,11 +82,9 @@ struct MainView: View {
                             }
                         })
                     }
-                    .padding(.bottom, 20
-                    )
+                    .ignoresSafeArea(.all)
                 }
-                .ignoresSafeArea(.all)
-                
+               
             }
         }
     }

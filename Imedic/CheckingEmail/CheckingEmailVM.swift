@@ -8,6 +8,7 @@
 import Foundation
 import Alamofire
 
+
 class CheckingEmailVM: ObservableObject{
     
     @Published var nav: NavVm
@@ -68,7 +69,7 @@ class CheckingEmailVM: ObservableObject{
                     
                     self.stop = true
                     self.next()
-                    
+                
                     print(KeyChainManager.shared.retreiveToken())
                 }
                 else{

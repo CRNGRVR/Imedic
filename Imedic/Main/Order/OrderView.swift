@@ -9,11 +9,14 @@ import SwiftUI
 
 struct OrderView: View {
     
-    
+    @ObservedObject var orderVM: OrderVM
+    init(anCartVM: AnCartVM){
+        orderVM = OrderVM(anVM: anCartVM)
+    }
     
     var body: some View {
         VStack{
-            Button(action: {}, label: {})
+            Button(action: {orderVM.getl()}, label: {Text("shirota & dolgota")})
             
             Text("Оформление заказа")
              
@@ -30,6 +33,11 @@ struct OrderView: View {
                 }
             }
         }
+        .onAppear{
+            orderVM.request()
+        }
+        
+        
     }
 }
 
