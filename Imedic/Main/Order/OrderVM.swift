@@ -31,5 +31,4 @@ class OrderVM: ObservableObject{
         print(locationManager.location?.coordinate.latitude)
         print(locationManager.location?.coordinate.longitude)
     }
-    
 }

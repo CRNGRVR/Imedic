@@ -37,7 +37,7 @@ final class TestOnboarding: XCTestCase {
     
         onb.nextBoard()
         
-        var resultOfCompare = compareItems(onb.queue.first, OnboardingItem(title: "Уведомления", descr: "Вы быстро узнаете о результатах", image: "onboard2"))
+        let resultOfCompare = compareItems(onb.queue.first, OnboardingItem(title: "Уведомления", descr: "Вы быстро узнаете о результатах", image: "onboard2"))
         
         XCTAssertTrue(resultOfCompare)
     }

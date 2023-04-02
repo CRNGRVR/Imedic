@@ -120,12 +120,7 @@ struct AnView: View {
                         .frame(width: PercentageFromScreen.shared.w(100), height: PercentageFromScreen.shared.h(100))
 
                     ItemSheet(anVM: anCartVM)
-                        //.padding(.top, PercentageFromScreen.shared.h(20))
                 }
-
-
-                //Color.blue
-                //Text("Ну что это такое")
             }
             
             

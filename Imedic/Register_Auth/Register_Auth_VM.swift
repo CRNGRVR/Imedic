@@ -16,6 +16,9 @@ class Reg_AuthVM: ObservableObject{
     }
     
     @Published var mail = "" {
+        
+        //  Всякий раз, когда в поле вводтся новая буква
+        //  или стирается старая, происходит проверка
         didSet{
             checkPattern()
         }
@@ -89,14 +92,20 @@ class Reg_AuthVM: ObservableObject{
             let headers: HTTPHeaders = ["email" : mail]
             
             AF
-                .request("https://medic.madskill.ru/api/sendCode", method: .post ,headers: headers)
+                .request("https://medic.madskill.ru/api/sendCode", method: .post, headers: headers)
                 .responseDecodable(of: SendCodeOutput.self){responce in
                     if responce.value != nil{
                         
                         if responce.response?.statusCode == 200{
                             
-                            self.nav.email = self.mail //Передача в другое представление
+                            //  Передача в другое представление
+                            self.nav.email = self.mail
+                            
+                            //  Удаление существующего токена из безопасного хранилища
+                            //  для заполнения новым
                             KeyChainManager.shared.deleteToken()
+                            
+                            //  Переключение view
                             self.nav.currentScreen = "checking_email"
                         }
                     }
